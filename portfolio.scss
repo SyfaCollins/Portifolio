@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300;1,400&display=swap');
+
 $primary-color:#efe8e8;
-$accent-color: #ff652f;
+$tanciary-color:#1c9394;
+$accent-color: #E08414;
 $text-color:rgb(21, 25, 58);
+$background-color:#467ce0;
 $font-weight:( "regular": 100, "medium": 400, "bold": 700);
+
+
+
 
 *{
     margin: 0;
@@ -14,63 +23,88 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
 
 body{
+    display: flex;
+    flex-direction: row;
 font-family: Montserrat;
-
+color:$tanciary-color;
+height: 100vh;
 background-color: $primary-color;
 }
 
 
 
 // ********************main-container**************
-#main-container{
-    display: flex;
-    flex-direction: row;
+header{
+    background-color:#ffff; 
+    padding: 0 3em;
+    flex-basis: auto;
     height: 100vh;
 
-}
-
-h1{
-    font-size: 90px;
-
-font-weight: map-get($font-weight, bold);
-
-}
-
-h1 > span{
-    margin-left:-.3em;
-    font-weight: map-get($font-weight , regular );
-}
-
-.container-item:nth-child(1){
-    display: flex;
-    flex-direction: column;
-    background-color:#ffff; 
-    flex-basis: 45%;
-    // align-items:center;
-    justify-content: center;
-    padding-left: 2em;
+    // min-width: max-content;
+   
 
 
-}
+    #main_text_container{
+        display :flex;
+        height: inherit;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: stretch;
+     
 
-.container-item:nth-child(1) #page_buttons{
-    // background-color: blue;
-        display: flex;
-        flex-direction: row;
-        // padding-left: 5em;
-        gap:.3em;
-        align-self: center;
-
-        button{
-            font-weight: map-get($font-weight ,medium );
-            padding: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
+        #title{
+    
+            p:nth-child(2){
+                font-size: 90px;
+            color: $text-color;
+            font-weight: map-get($font-weight, bold);
+            
+            }
+            
+            p > span{
+                // margin-left:-.3em;
+                font-weight: map-get($font-weight , regular );
+            }
+        
+            h1{
+                float: right;
+                // display: flex;
+                // flex-direction: row;
+                // align-items: flex-end;
+                font-size:20px
+            }
         
         }
         
+        #footer{
+            flex-basis: auto;
+           height: auto;
+        }
+
+
     }
+
+
+
+}
+
+
+
+
+
+
+p{
+    // font-family: 'Bree Serif', serif;
+    font-family: 'Source Serif Pro', serif;
+}
+
+
+
+h2,h3{
+    color: $text-color;
+}
+
+
 
 
 #scroll_section{
@@ -78,7 +112,7 @@ h1 > span{
     scroll-behavior: smooth;
     // padding-left: 2em;
     display: flex;
-    flex-basis: 55%;
+    flex-basis: auto;
     flex-direction: column;
     
 }
@@ -105,10 +139,13 @@ h1 > span{
     padding-top: 12em;
 }
 
+figure p{
+    padding-left: 1em;
+}
 
-#designer_figure h2{
-    padding-left: .5em;
-    font-weight: map-get($font-weight, medium );
+ #designer_figure p span{
+    color: $accent-color;
+    font-weight: 900;
 }
 
 // #designer_figure img{
@@ -133,7 +170,7 @@ h1 > span{
 #wrapper{
     // background-color: #ffff;
 
-    overflow-x: auto;
+    // overflow-x: auto;
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -144,9 +181,17 @@ h1 > span{
     
 }
 
-#done_projects{
-    display:flex;
-    flex-direction: column;
+// .project-card{
+//     flex-basis: 50%;
+//     padding: 5em;
+//     display:flex;
+//     flex-direction: column;
+// }
+
+#flex_item1{
+    padding: 5em;
+    background-image: url("./dist/css/Svgs/Designer.svg");
+
 }
 
 #title{
