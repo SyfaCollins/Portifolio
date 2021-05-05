@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300;1,400&display=swap');
 
+
 $primary-color:#efe8e8;
 $tanciary-color:#1c9394;
 $accent-color: #E08414;
@@ -13,14 +14,11 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
 
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 body{
     display: flex;
@@ -31,18 +29,20 @@ height: 100vh;
 background-color: $primary-color;
 }
 
+// *******RIGHT SECTION*************
+
+// ***********header*************
 
 
-// ********************main-container**************
 header{
+
     background-color:#ffff; 
     padding: 0 3em;
     flex-basis: auto;
     height: 100vh;
 
-    // min-width: max-content;
-   
 
+    // *******main_text_container**********
 
     #main_text_container{
         display :flex;
@@ -50,22 +50,25 @@ header{
         flex-direction: column;
         justify-content: center;
         // align-items: stretch;
-     
+    
+
+        // *********title in the Header***********
 
         #title{
     
             p:nth-child(2){
-                font-size: 90px;
+            font-size: 90px;
             color: $text-color;
+            font-family: montserrat;
             font-weight: map-get($font-weight, bold);
-            
+        
             }
-            
+
             p > span{
                 // margin-left:-.3em;
                 font-weight: map-get($font-weight , regular );
             }
-        
+
             h1{
                 float: right;
                 // display: flex;
@@ -73,25 +76,38 @@ header{
                 // align-items: flex-end;
                 font-size:20px
             }
-        
+            
+            button{
+                background-color: $accent-color;
+                padding:.5em 2em;
+                font-size: 18px;
+                font-family: Montserrat;
+                border-collapse: collapse;
+                color: $primary-color;
+                border: none;
+                float:right;
+                
+                 
+            }
         }
-        
+
+        // *********footer in the Header***********
+
         #footer{
             flex-basis: auto;
            height: auto;
         }
+    
 
 
     }
 
-
-
+    
+// *******end of header***********
 }
 
 
-
-
-
+// ************general styles**************
 
 p{
     // font-family: 'Bree Serif', serif;
@@ -100,20 +116,29 @@ p{
 
 
 
-h2,h3{
+h2{
+    margin-bottom: 1.5em;
     color: $text-color;
 }
 
+h3{
+    color: $text-color;
+
+}
 
 
+// *****************LEFT SECTION*****************
 
 #scroll_section{
     overflow-y: scroll;
     scroll-behavior: smooth;
     // padding-left: 2em;
+    row-gap: 2em;
     display: flex;
     flex-basis: auto;
     flex-direction: column;
+    line-height: 1.5em;
+
     
 }
 
@@ -124,84 +149,116 @@ h2,h3{
     display: flex;
     flex-direction: column;
     // height: 100vh;
-}
+    row-gap: 1em;
 
-
-#designer_figure{
-   display: flex;
-    flex-basis: 40%;
-    color: white;
-   background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)),
-    url('Profpic-.jpg');
-    background-size: cover;
-    background-position: center;
-    align-items: flex-end;
-    padding-top: 12em;
-}
-
-figure p{
-    padding-left: 1em;
-}
-
- #designer_figure p span{
-    color: $accent-color;
-    font-weight: 900;
-}
-
-// #designer_figure img{
-// // display: block;
-// position:inherit;
-// width: auto;
-// height: 450px;
- 
-//  }
-
-
-#about_main_content{
-    // background-color: cadetblue;
-    flex-basis: 60%;
-    padding:2em;
-    width: 90%;
-    padding-bottom: 5em;
-    line-height: 2em;
-}
-
-
-#wrapper{
-    // background-color: #ffff;
-
-    // overflow-x: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    padding: 0 2em;
-    // width: auto;
-   
-
+    #about_main_content{
+        padding-left: 2em;
     
+      
+    }
+
+
+    #designer_figure{
+        display: flex;
+        flex-basis: 40%;
+        color: white;
+        background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)),
+        url('Profpic-.jpg');
+        background-size: cover;
+        background-position: center;
+        align-items: flex-end;
+        padding-top: 12em;
+
+        p{
+            padding-left: 1em;
+
+            span{
+                color: $accent-color;
+                font-weight: 900;
+            }
+        }
+    }
+    
+ 
 }
 
-// .project-card{
-//     flex-basis: 50%;
-//     padding: 5em;
-//     display:flex;
-//     flex-direction: column;
-// }
 
-#flex_item1{
-    padding: 5em;
-    background-image: url("./dist/css/Svgs/Designer.svg");
+// *******************done_projects***************
+
+#done_projects{
+    padding:0 2em;
+
+    #projects_card_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        column-gap: 1em;
+
+
+        .project-card{
+            flex-basis: 50%;
+            padding-top:15em;
+            margin-bottom: 2em;
+            border-radius: 20px;
+            background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)),
+            url('Profpic-.jpg');
+            background-size: cover;
+            background-position: center;
+
+            .card_description{
+                background: white;
+                text-align: center;
+                padding: .5em;
+                border-radius:0 0 20px 20px;
+
+
+                button{
+                background-color: $accent-color;
+                padding:.5em 2em;
+                border-radius: 5px;
+                font-size: 18px;
+                font-family: Montserrat;
+                border-collapse: collapse;
+                color: $primary-color;
+                border: none;
+
+                }
+            }
+        }
+    }
 
 }
 
-#title{
- padding-left:2em;
+
+// ***************Services**********************
+
+#services{
+    padding:0 2em;
+
+    #service_cards_wrapper{
+        display:flex;
+        flex-direction: column;
+        gap:1em;
+
+        .service-card{
+            display: flex;
+            flex-direction: row;
+
+            
+            .card_description{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap:.5em;
+                padding-left: 2em;
+
+            }
+        }
+
+        img{
+            flex-basis: auto;
+            height: 250px;
+        }
+    }
 
 }
-
-.project-card img{
-   
-    // width: max-content;
-    height: 200px;
-}
-

@@ -47,6 +47,7 @@ header #main_text_container {
 header #main_text_container #title p:nth-child(2) {
   font-size: 90px;
   color: #15193a;
+  font-family: montserrat;
   font-weight: 700;
 }
 
@@ -59,6 +60,17 @@ header #main_text_container #title h1 {
   font-size: 20px;
 }
 
+header #main_text_container #title button {
+  background-color: #E08414;
+  padding: .5em 2em;
+  font-size: 18px;
+  font-family: Montserrat;
+  border-collapse: collapse;
+  color: #efe8e8;
+  border: none;
+  float: right;
+}
+
 header #main_text_container #footer {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
@@ -69,13 +81,19 @@ p {
   font-family: 'Source Serif Pro', serif;
 }
 
-h2, h3 {
+h2 {
+  margin-bottom: 1.5em;
+  color: #15193a;
+}
+
+h3 {
   color: #15193a;
 }
 
 #scroll_section {
   overflow-y: scroll;
   scroll-behavior: smooth;
+  row-gap: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +103,7 @@ h2, h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  line-height: 1.5em;
 }
 
 #about_section {
@@ -95,9 +114,14 @@ h2, h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  row-gap: 1em;
 }
 
-#designer_figure {
+#about_section #about_main_content {
+  padding-left: 2em;
+}
+
+#about_section #designer_figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,25 +138,20 @@ h2, h3 {
   padding-top: 12em;
 }
 
-figure p {
+#about_section #designer_figure p {
   padding-left: 1em;
 }
 
-#designer_figure p span {
+#about_section #designer_figure p span {
   color: #E08414;
   font-weight: 900;
 }
 
-#about_main_content {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
-  padding: 2em;
-  width: 90%;
-  padding-bottom: 5em;
-  line-height: 2em;
+#done_projects {
+  padding: 0 2em;
 }
 
-#wrapper {
+#done_projects #projects_card_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,20 +159,86 @@ figure p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 1em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+}
+
+#done_projects #projects_card_wrapper .project-card {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 15em;
+  margin-bottom: 2em;
+  border-radius: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568))), url("Profpic-.jpg");
+  background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)), url("Profpic-.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#done_projects #projects_card_wrapper .project-card .card_description {
+  background: white;
+  text-align: center;
+  padding: .5em;
+  border-radius: 0 0 20px 20px;
+}
+
+#done_projects #projects_card_wrapper .project-card .card_description button {
+  background-color: #E08414;
+  padding: .5em 2em;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: Montserrat;
+  border-collapse: collapse;
+  color: #efe8e8;
+  border: none;
+}
+
+#services {
   padding: 0 2em;
 }
 
-#flex_item1 {
-  padding: 5em;
-  background-image: url("./dist/css/Svgs/Designer.svg");
+#services #service_cards_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
 }
 
-#title {
+#services #service_cards_wrapper .service-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#services #service_cards_wrapper .service-card .card_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5em;
   padding-left: 2em;
 }
 
-.project-card img {
-  height: 200px;
+#services #service_cards_wrapper img {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  height: 250px;
 }
 /*# sourceMappingURL=portfolio.css.map */
