@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300;1,400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,31 +9,104 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-family: Montserrat;
+  color: #1c9394;
+  height: 100vh;
   background-color: #efe8e8;
 }
 
-#main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+header {
+  background-color: #ffff;
+  padding: 0 3em;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
   height: 100vh;
 }
 
-h1 {
-  font-size: 80px;
+header #main_text_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-h1 span {
+header #main_text_container #title p:nth-child(2) {
+  font-size: 90px;
+  color: #15193a;
+  font-family: montserrat;
+  font-weight: 700;
+}
+
+header #main_text_container #title p > span {
   font-weight: 100;
-  margin-left: -.3em;
 }
 
-.container-item:nth-child(1) {
+header #main_text_container #title h1 {
+  float: right;
+  font-size: 20px;
+}
+
+header #main_text_container #title button {
+  background-color: #E08414;
+  padding: .5em 2em;
+  font-size: 18px;
+  font-family: Montserrat;
+  border-collapse: collapse;
+  color: #efe8e8;
+  border: none;
+  float: right;
+}
+
+header #main_text_container #footer {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  height: auto;
+}
+
+p {
+  font-family: 'Source Serif Pro', serif;
+}
+
+h2 {
+  margin-bottom: 1.5em;
+  color: #15193a;
+}
+
+h3 {
+  color: #15193a;
+}
+
+#scroll_section {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  row-gap: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1.5em;
+}
+
+#about_section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,16 +114,44 @@ h1 span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ffff;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  row-gap: 1em;
+}
+
+#about_section #about_main_content {
   padding-left: 2em;
 }
 
-.container-item:nth-child(1) #page_buttons {
+#about_section #designer_figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568))), url("Profpic-.jpg");
+  background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)), url("Profpic-.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 12em;
+}
+
+#about_section #designer_figure p {
+  padding-left: 1em;
+}
+
+#about_section #designer_figure p span {
+  color: #E08414;
+  font-weight: 900;
+}
+
+#done_projects {
+  padding: 0 2em;
+}
+
+#done_projects #projects_card_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,39 +159,86 @@ h1 span {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: .3em;
-  -ms-flex-item-align: center;
-      align-self: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
 }
 
-.container-item:nth-child(1) #page_buttons button {
-  font-weight: 400;
-  padding: 1em;
+#done_projects #projects_card_wrapper .project-card {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 15em;
+  margin-bottom: 2em;
+  border-radius: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568))), url("Profpic-.jpg");
+  background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)), url("Profpic-.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#done_projects #projects_card_wrapper .project-card .card_description {
+  background: white;
+  text-align: center;
+  padding: .5em;
+  border-radius: 0 0 20px 20px;
+}
+
+#done_projects #projects_card_wrapper .project-card .card_description button {
+  background-color: #E08414;
+  padding: .5em 2em;
   border-radius: 5px;
-  cursor: pointer;
+  font-size: 18px;
+  font-family: Montserrat;
+  border-collapse: collapse;
+  color: #efe8e8;
   border: none;
 }
 
-.container-item:nth-child(2) {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+#services {
+  padding: 0 2em;
+}
+
+#services #service_cards_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 55%;
-      flex-basis: 55%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1em;
 }
 
-#designer_figure {
-  -webkit-clip-path: polygon(0 0, 61% 0, 38% 61%, 0 61%);
-          clip-path: polygon(0 0, 61% 0, 38% 61%, 0 61%);
+#services #service_cards_wrapper .service-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-img {
-  height: auto;
+#services #service_cards_wrapper .service-card .card_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5em;
+  padding-left: 2em;
+}
+
+#services #service_cards_wrapper img {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  height: 250px;
 }
 /*# sourceMappingURL=portfolio.css.map */

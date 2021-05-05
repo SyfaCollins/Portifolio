@@ -1,0 +1,145 @@
+
+
+
+
+
+
+
+
+
+
+// ********************main-container**************
+header{
+    background-color:#ffff; 
+    padding: 0 3em;
+    flex-basis: auto;
+    height: 100vh;
+
+    // min-width: max-content;
+   
+
+
+    #main_text_container{
+        display :flex;
+        height: inherit;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: stretch;
+     
+
+        #title{
+    
+            p:nth-child(2){
+            font-size: 90px;
+            color: $text-color;
+            font-family: montserrat;
+            font-weight: map-get($font-weight, bold);
+            
+            }
+            
+            p > span{
+                // margin-left:-.3em;
+                font-weight: map-get($font-weight , regular );
+            }
+        
+            h1{
+                float: right;
+                // display: flex;
+                // flex-direction: row;
+                // align-items: flex-end;
+                font-size:20px
+            }
+
+            button{
+                background-color: $accent-color;
+                padding:.5em 2em;
+                font-size: 18px;
+                font-family: Montserrat;
+                border-collapse: collapse;
+                color: $primary-color;
+                border: none;
+                font-weight:$font-weight, bold;
+                float:right;
+                
+                 
+            }
+        
+        }
+        
+        #footer{
+            flex-basis: auto;
+           height: auto;
+        }
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+p{
+    // font-family: 'Bree Serif', serif;
+    font-family: 'Source Serif Pro', serif;
+}
+
+
+
+h2,h3{
+    color: $text-color;
+}
+
+
+
+
+#scroll_section{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    // padding-left: 2em;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    
+}
+
+
+// *********about section*******************
+
+#about_section{
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+}
+
+
+#designer_figure{
+   display: flex;
+    flex-basis: 40%;
+    color: white;
+   background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)),
+    url('Profpic-.jpg');
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
+    padding-top: 12em;
+}
+
+#designer_figure {
+      
+    p{
+        padding-left: 0em;
+
+        span{
+            // color: $tanciary-color;
+            font-weight: 900;
+        }
+    }
+
+        
+}
+
