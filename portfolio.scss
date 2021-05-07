@@ -48,13 +48,21 @@ header{
         display :flex;
         height: inherit;
         flex-direction: column;
-        justify-content: center;
+        // justify-content: center;
+        justify-content: first baseline;
+
         // align-items: stretch;
     
 
         // *********title in the Header***********
 
         #title{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
     
             p:nth-child(2){
             font-size: 90px;
@@ -70,22 +78,29 @@ header{
             }
 
             h1{
-                float: right;
-                // display: flex;
-                // flex-direction: row;
-                // align-items: flex-end;
-                font-size:20px
+                
+                display: flex;
+                flex-direction: row;
+                font-size:20px;
+                justify-content: flex-end;
             }
             
             button{
                 background-color: $accent-color;
-                padding:.5em 2em;
+                padding:1em 2em;
+                margin-top: 2em;
                 font-size: 18px;
                 font-family: Montserrat;
                 border-collapse: collapse;
                 color: $primary-color;
                 border: none;
-                float:right;
+                width: max-content;
+                display: flex;
+                flex-direction: row;
+                align-self: flex-end;
+                
+
+
                 
                  
             }
@@ -94,8 +109,10 @@ header{
         // *********footer in the Header***********
 
         #footer{
-            flex-basis: auto;
-           height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-bottom: 2em;
         }
     
 
@@ -233,12 +250,14 @@ h3{
 // ***************Services**********************
 
 #services{
-    padding:0 2em;
+    padding:2em;
+    background: white;
+    padding-right: 1em;
 
     #service_cards_wrapper{
         display:flex;
         flex-direction: column;
-        gap:1em;
+        gap:5em;
 
         .service-card{
             display: flex;
@@ -251,13 +270,19 @@ h3{
                 justify-content: center;
                 gap:.5em;
                 padding-left: 2em;
+                // background: $primary-color;
 
             }
         }
 
+        .card-row_reverse{
+            flex-direction: row-reverse;
+        }
+
         img{
-            flex-basis: auto;
+            // flex-basis: 10%;
             height: 250px;
+            width: auto;
         }
     }
 
