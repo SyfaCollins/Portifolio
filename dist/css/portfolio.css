@@ -39,9 +39,23 @@ header #main_text_container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: first baseline;
+      -ms-flex-pack: first baseline;
+          justify-content: first baseline;
+}
+
+header #main_text_container #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
 }
 
 header #main_text_container #title p:nth-child(2) {
@@ -56,25 +70,53 @@ header #main_text_container #title p > span {
 }
 
 header #main_text_container #title h1 {
-  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-size: 20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 header #main_text_container #title button {
   background-color: #E08414;
-  padding: .5em 2em;
+  padding: 1em 2em;
+  margin-top: 2em;
   font-size: 18px;
   font-family: Montserrat;
   border-collapse: collapse;
   color: #efe8e8;
   border: none;
-  float: right;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 header #main_text_container #footer {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 2em;
 }
 
 p {
@@ -197,7 +239,9 @@ h3 {
 }
 
 #services {
-  padding: 0 2em;
+  padding: 2em;
+  background: white;
+  padding-right: 1em;
 }
 
 #services #service_cards_wrapper {
@@ -208,7 +252,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1em;
+  gap: 5em;
 }
 
 #services #service_cards_wrapper .service-card {
@@ -236,9 +280,15 @@ h3 {
   padding-left: 2em;
 }
 
+#services #service_cards_wrapper .card-row_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 #services #service_cards_wrapper img {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
   height: 250px;
+  width: auto;
 }
 /*# sourceMappingURL=portfolio.css.map */
