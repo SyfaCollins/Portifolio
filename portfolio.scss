@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
+@import url('mobile.scss');
+
 $primary-color:#efe8e8;
 $tanciary-color:#1c9394;
 $accent-color: #E08414;
@@ -25,12 +27,15 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 }
 
 body{
-
+    display: flex;
+    flex-direction: row;
+    flex: 1;
     display: flex;
     flex-direction: row;
     font-family: Montserrat;
     color:$tanciary-color;
     height: 100vh;
+    overflow-y: hidden;
     background-color: $primary-color;
 
 }
@@ -44,26 +49,14 @@ span{
 
 // *******RIGHT SECTION*************
 
-
-
-header{
-
-// ***********header*************
-
-    background-color:#ffff; 
-    filter: drop-shadow(1px 1px 2px);
-    padding: 0 3em;
-    height: inherit;
-    flex: auto;
-    // flex-grow: ;
-
-
     // *******main_text_container**********
 
     #main_text_container{
         display :flex;
-        height: inherit;
         flex-direction: column;
+        justify-content: space-between;
+        flex:2;
+        background-color: white;
 
         // *********title in the Header***********
 
@@ -72,11 +65,13 @@ header{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100%;
+            flex: 1;
+            padding:0 1em;
+        
 
     
             p:nth-child(2){
-            font-size: 90px;
+            font-size: 70px;
             color: $text-color;
             font-family: montserrat;
             font-weight: map-get($font-weight, bold);
@@ -84,7 +79,7 @@ header{
             }
 
             p > span{
-                // margin-left:-.3em;
+                margin-left:-.3em;
                 font-weight: map-get($font-weight , regular );
             }
 
@@ -99,18 +94,28 @@ header{
             button{
 
                 background-color: $accent-color;
-                padding:1em 2em;
+                background:linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(9, 10, 63, 0.863));
+                padding:1em;
                 margin-top: 2em;
                 font-size: 18px;
+                display: flex;
+                width: 8em;
                 font-family: Montserrat;
                 border-collapse: collapse;
                 color: $primary-color;
                 border: none;
-                width: max-content;
                 display: flex;
-                flex-direction: row;
                 align-self: flex-end;
+                justify-content: center;
+                transition-property: width;
+                transition-duration: .5s;
+                text-align: center;
+                
+            }
 
+
+            button:hover{
+                width:300px;
                 
             }
         }
@@ -119,7 +124,6 @@ header{
 
         #footer{
             text-align: center;
-            // padding-bottom: 2em;
 
             p{
                 color: $text-color;
@@ -130,19 +134,15 @@ header{
 
             #dev_figure1{
                 display: flex;
-                // background-color: coral;
                 border-top: 1px solid $hover-color;
                 border-width: 20;
                 justify-content: center;
                 gap: 2em;
                 padding: 1em;
                 padding-top:5px;
-                margin-top:.5em;
-
-                
-
+                            
                 svg{
-                    // height: auto;
+            
                     width: 30px;
                     cursor: pointer;
                     fill: $hover-color ;
@@ -172,20 +172,21 @@ header{
 
     
 // *******end of header***********
-}
+
 
 
 // ************general styles**************
 
 p{
-    // font-family: 'Bree Serif', serif;
+    
     font-family: 'Source Serif Pro', serif;
+    font-size: 15px;
 }
 
 
 
 h2{
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     color: $text-color;
 }
 
@@ -195,32 +196,41 @@ h3{
 }
 
 
-// *****************LEFT SECTION*****************
+// *****************Scroll SECTION*****************
 
 #scroll_section{
-
+flex: 2;
+flex-basis: 10%;
     overflow-y:  scroll;
     scroll-behavior: smooth;
-    row-gap: 2em;
+    // row-gap: 3em;
     display: flex;
     flex-direction: column;
     line-height: 1.5em;
-    // border: black 3px solid;
+    scroll-behavior: smooth;
+
+   
 
 }
+
+
 
 
 // *********about section*******************
 
 #about_section{
+
     display: flex;
     flex-direction: column;
-    // height: 100vh;
     row-gap: 1em;
 
     #about_main_content{
 
-        padding-left: 2em;
+        padding: 0 2em ;
+
+        p{
+            padding-bottom:1em;
+        }
 
     }
 
@@ -230,13 +240,12 @@ h3{
         flex-direction: column;
         justify-content: space-between;
         color: white;
-        background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)),
+        background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(11, 12, 87, 0.596)),
         url('Profpic-.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: bottom;
+        background-position: top center;
         background-attachment: fixed;
-        // align-items: flex-end;
         height: 20em;
 
 
@@ -252,7 +261,7 @@ h3{
             opacity: 75%;
 
            & > p{
-            //    opacity: 80%;
+    
             font-family: Montserrat;
             font-size: 18px;
             cursor: pointer;
@@ -302,34 +311,36 @@ h3{
 
 #done_projects{
     padding:0 2em;
+    
 
     #projects_card_wrapper{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        // column-gap: 1em;
+        column-gap: 1em;
+        overflow-x: scroll;
 
 
         .project-card{
-            // flex-basis: 50%;
-            // padding-top:15em;
-            // margin-bottom: 3em;
-            border-radius: 20px;
-            // background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)),
-            // url('Svg/Portifolio_Project.png');
-            // background-size: contain;
-            // background-position: center;
+            display:flex;
+            flex-direction: column;
+            width: 650px;
 
-            #flex_item2{
+        
 
-                // display: flex;
-                // flex-direction: column;
-                 img{
-                    width: 100px;
-                    height: 100px;
+            & > img{
+                object-fit: cover;
+                object-position: inherit;
+                
+            
+            }
 
-                }
-
+            .project-card:nth-child(1){
+                display: none;
+            padding: 10em;
+            background:url('Profpic-.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
             }
          
 
@@ -340,11 +351,10 @@ h3{
                 padding: .5em 0;
                 border-radius:0 0 20px 20px;
 
-
                 button{
-                background-color: $accent-color;
+    
+                background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
                 padding:.5em 2em;
-                margin-top: 1em;
                 border-radius: 5px;
                 font-size: 18px;
                 font-family: Montserrat;
@@ -371,35 +381,30 @@ h3{
    
 
         ul{
+
             line-height: 3em;
-            // padding-left: 5em;
 
             li{
-            margin: 1em;
-            list-style-type: none;
-            font-family: Montserrat;
-            // padding:1em 3em;
-            background: white;
-            width:auto;
-            margin-right: 5em;
-            padding: .5em;
+                margin-bottom: 1em;
+                list-style-type: none;
+                font-family: Montserrat;
+                background: white;
+                width:auto;
+                margin-right: 5em;
+                padding: .5em;
 
             
-            .level-bar{
-                height: 3px;
-                margin-right: 50%;
-                background: $text-color;
-                border-radius: 50px;
-                width: 100%;
-            }
+                .level-bar{
+                    height: 3px;
+                    margin-right: 50%;
+                    background: $text-color;
+                    border-radius: 50px;
+                    width: 100%;
+                }
 
-            li:nth-child(2){
-                width: 20%;
-            }
-
-            // .level-bar:nth-child(2){
-            //     width: 79%;
-                
+                li:nth-child(2){
+                    width: 20%;
+                }
             }
 
 
@@ -414,10 +419,8 @@ h3{
                 
             }
 
-
-
-            }
         }
+    }
 
     
 
@@ -427,7 +430,7 @@ h3{
     padding:2em;
     background: white;
     padding-right: 1em;
-backdrop-filter: drop-shadow(4px 4px 10px blue);
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
 
 
     #service_cards_wrapper{
@@ -439,6 +442,8 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
             display: flex;
             flex-direction: row;
 
+           
+
             
             .card_description{
                 display: flex;
@@ -446,21 +451,31 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
                 justify-content: center;
                 gap:.5em;
                 padding-left: 2em;
-                // background: $primary-color;
 
             }
         }
 
+        #service_card_one, #service_card_three{
+            text-align: right
+
+        }
+
         .card-row_reverse{
             flex-direction: row-reverse;
+        
+            
+    
+    
         }
 
         img{
-            // flex-basis: 10%;
+
             height: 250px;
             width: auto;
         }
     }
+
+   
 
 }
 
@@ -471,25 +486,24 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
 #form_Section{
     display: flex;
     flex-direction: column;
-    // padding-right: 1em;
     margin-right: auto;
     width: 100%;
     background-image: url("Svgs/contact_form.svg");
-    // background-color: khaki;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     
     h2{
-        color: $primary-color
+        color: $primary-color;
+        
     }
     
    
 
     .form-container{
-        // display: flex;
-        // flex-direction: row;
+        display: flex;
+        flex-direction: column;
         padding: 2em;
         background: rgba(21, 25, 58, 0.3);
         backdrop-filter: blur(3px);
@@ -498,27 +512,19 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
 
         form{
             
-            // justify-self: center;
-        
             z-index: 1;
 
             input , textarea{
-                // border: none;
                 border-collapse: collapse;
-                // background-color: rgba(0, 0, 255, 0);
                 fill:transparent;
                 height: 2em;
                 width: 90%;
-                // line-height: .5em;
                 margin-top: 1em;
                 border-width:0 0 2px 0;
                 color: white;
                 font-size: 18px;
                 font-weight: map-get($font-weight, medium );
-                
-                
-                
-
+        
             }
 
             textarea{
@@ -528,6 +534,7 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
 
             button{
                 background-color: $accent-color;
+                background:linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
                 padding:1em 2em;
                 margin-top: 1em;
                 font-size: 18px;
@@ -551,8 +558,7 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
 
             img{
                 width: 350px;
-                // height: ;
-                
+              
             }
 
         }
@@ -563,15 +569,51 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
     
 
 #show_offs{
+
     padding:2em;
-    // background-image: url("Svgs/contact_form.jpg");
 
-
-    span{
-        font-weight: map-get($font-weight, medium);
-    }
+        span{
+            font-weight: map-get($font-weight, medium);
+        }
 }
 
+//  ***************show_offs Section**********************
+
+
+#show_offs{
+
+        #gallery{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 2em;
+            
+       
+            .img-container img{
+                width:100%;
+                height:350px ;
+                object-fit: cover;
+                object-position: center;
+                transition: all 1s;
+                transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+
+             
+
+            }
+
+            img:hover{
+                object-fit: cover;
+                // height:360px ;
+                transform: scale(1.1);
+
+                
+
+                }
+
+
+        }
+
+
+    }
 
 
 //  ***************Form Section**********************
@@ -580,6 +622,11 @@ backdrop-filter: drop-shadow(4px 4px 10px blue);
         background: $text-color;
         padding: 3em;
     }
+
+
+
+
+
         
 
 

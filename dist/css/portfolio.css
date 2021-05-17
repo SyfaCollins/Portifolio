@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url("mobile.scss");
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +18,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: flex;
+  flex-direction: row;
   font-family: Montserrat;
   color: #1c9394;
   height: 100vh;
+  overflow-y: hidden;
   background-color: #efe8e8;
 }
 
@@ -27,29 +34,24 @@ span {
   font-weight: 400;
 }
 
-header {
-  background-color: #ffff;
-  -webkit-filter: drop-shadow(1px 1px 2px);
-          filter: drop-shadow(1px 1px 2px);
-  padding: 0 3em;
-  height: inherit;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
-}
-
-header #main_text_container {
+#main_text_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: inherit;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  background-color: white;
 }
 
-header #main_text_container #title {
+#main_text_container #title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,21 +62,25 @@ header #main_text_container #title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1em;
 }
 
-header #main_text_container #title p:nth-child(2) {
-  font-size: 90px;
+#main_text_container #title p:nth-child(2) {
+  font-size: 70px;
   color: #15193a;
   font-family: montserrat;
   font-weight: 700;
 }
 
-header #main_text_container #title p > span {
+#main_text_container #title p > span {
+  margin-left: -.3em;
   font-weight: 100;
 }
 
-header #main_text_container #title h1 {
+#main_text_container #title h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,40 +94,49 @@ header #main_text_container #title h1 {
           justify-content: flex-end;
 }
 
-header #main_text_container #title button {
+#main_text_container #title button {
   background-color: #E08414;
-  padding: 1em 2em;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.904)), to(rgba(9, 10, 63, 0.863)));
+  background: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(9, 10, 63, 0.863));
+  padding: 1em;
   margin-top: 2em;
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8em;
   font-family: Montserrat;
   border-collapse: collapse;
   color: #efe8e8;
   border: none;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-header #main_text_container #footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
   text-align: center;
 }
 
-header #main_text_container #footer p {
+#main_text_container #title button:hover {
+  width: 300px;
+}
+
+#main_text_container #footer {
+  text-align: center;
+}
+
+#main_text_container #footer p {
   color: #15193a;
   font-size: 30px;
   font-family: 'Reenie Beanie', cursive;
 }
 
-header #main_text_container #footer #dev_figure1 {
+#main_text_container #footer #dev_figure1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,27 +148,27 @@ header #main_text_container #footer #dev_figure1 {
   gap: 2em;
   padding: 1em;
   padding-top: 5px;
-  margin-top: .5em;
 }
 
-header #main_text_container #footer #dev_figure1 svg {
+#main_text_container #footer #dev_figure1 svg {
   width: 30px;
   cursor: pointer;
   fill: rgba(21, 25, 58, 0.671);
   -webkit-backdrop-filter: drop-shadow(20%);
 }
 
-header #main_text_container #footer #dev_figure1 svg:hover {
+#main_text_container #footer #dev_figure1 svg:hover {
   fill: #15193a;
   color: #15193a;
 }
 
 p {
   font-family: 'Source Serif Pro', serif;
+  font-size: 15px;
 }
 
 h2 {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   color: #15193a;
 }
 
@@ -162,9 +177,13 @@ h3 {
 }
 
 #scroll_section {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  row-gap: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,6 +192,7 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   line-height: 1.5em;
+  scroll-behavior: smooth;
 }
 
 #about_section {
@@ -187,7 +207,11 @@ h3 {
 }
 
 #about_section #about_main_content {
-  padding-left: 2em;
+  padding: 0 2em;
+}
+
+#about_section #about_main_content p {
+  padding-bottom: 1em;
 }
 
 #about_section #designer_figure {
@@ -202,11 +226,11 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568))), url("Profpic-.jpg");
-  background-image: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568)), url("Profpic-.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.904)), to(rgba(11, 12, 87, 0.596))), url("Profpic-.jpg");
+  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(11, 12, 87, 0.596)), url("Profpic-.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top center;
   background-attachment: fixed;
   height: 20em;
 }
@@ -273,18 +297,36 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  overflow-x: scroll;
 }
 
 #done_projects #projects_card_wrapper .project-card {
-  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 650px;
 }
 
-#done_projects #projects_card_wrapper .project-card #flex_item2 img {
-  width: 100px;
-  height: 100px;
+#done_projects #projects_card_wrapper .project-card > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: inherit;
+     object-position: inherit;
+}
+
+#done_projects #projects_card_wrapper .project-card .project-card:nth-child(1) {
+  display: none;
+  padding: 10em;
+  background: url("Profpic-.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #done_projects #projects_card_wrapper .project-card .card_description {
@@ -296,9 +338,9 @@ h3 {
 }
 
 #done_projects #projects_card_wrapper .project-card .card_description button {
-  background-color: #E08414;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
+  background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
   padding: .5em 2em;
-  margin-top: 1em;
   border-radius: 5px;
   font-size: 18px;
   font-family: Montserrat;
@@ -326,7 +368,7 @@ h3 {
 }
 
 #skill_container ul li {
-  margin: 1em;
+  margin-bottom: 1em;
   list-style-type: none;
   font-family: Montserrat;
   background: white;
@@ -399,6 +441,10 @@ h3 {
   padding-left: 2em;
 }
 
+#services #service_cards_wrapper #service_card_one, #services #service_cards_wrapper #service_card_three {
+  text-align: right;
+}
+
 #services #service_cards_wrapper .card-row_reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -432,6 +478,13 @@ h3 {
 }
 
 #form_Section .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 2em;
   background: rgba(21, 25, 58, 0.3);
   -webkit-backdrop-filter: blur(3px);
@@ -463,6 +516,8 @@ h3 {
 
 #form_Section .form-container form button {
   background-color: #E08414;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
+  background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
   padding: 1em 2em;
   margin-top: 1em;
   font-size: 18px;
@@ -493,6 +548,34 @@ h3 {
 
 #show_offs span {
   font-weight: 400;
+}
+
+#show_offs #gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+#show_offs #gallery .img-container img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#show_offs #gallery img:hover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 footer {

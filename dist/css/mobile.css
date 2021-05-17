@@ -1,0 +1,10 @@
+@media (max-width: 750px) {
+  body {
+    background-color: yellow;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 2fr;
+        grid-template-rows: 1fr 2fr;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
