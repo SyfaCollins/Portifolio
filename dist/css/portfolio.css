@@ -65,11 +65,12 @@ span {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 1em;
+  padding: 0 .5em;
+  padding-left: 2em;
 }
 
 #main_text_container #title p:nth-child(2) {
-  font-size: 70px;
+  font-size: 60px;
   color: #15193a;
   font-family: montserrat;
   font-weight: 700;
@@ -132,7 +133,7 @@ span {
 
 #main_text_container #footer p {
   color: #15193a;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Reenie Beanie', cursive;
 }
 
@@ -168,12 +169,15 @@ p {
 }
 
 h2 {
-  margin-bottom: 1em;
   color: #15193a;
 }
 
 h3 {
   color: #15193a;
+}
+
+button {
+  cursor: pointer;
 }
 
 #scroll_section {
@@ -277,7 +281,7 @@ h3 {
 #about_section #designer_figure p {
   padding-left: 1em;
   font-family: 'Reenie Beanie', cursive;
-  font-size: 35px;
+  font-size: 20px;
 }
 
 #about_section #designer_figure p span {
@@ -437,8 +441,6 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: .5em;
-  padding-left: 2em;
 }
 
 #services #service_cards_wrapper #service_card_one, #services #service_cards_wrapper #service_card_three {
@@ -576,6 +578,26 @@ h3 {
      object-fit: cover;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#news_letters {
+  padding: 2em;
+  line-height: 2em;
+  background-color: white;
+}
+
+#news_letters form input {
+  height: 3em;
+  width: 60%;
+}
+
+#news_letters form button {
+  background-color: #15193a;
+  color: white;
+  font-family: Montserrat;
+  height: 3em;
+  width: 30%;
+  cursor: pointer;
 }
 
 footer {

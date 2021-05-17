@@ -66,12 +66,13 @@ span{
             flex-direction: column;
             justify-content: center;
             flex: 1;
-            padding:0 1em;
+            padding:0 .5em;
+            padding-left: 2em;
         
 
     
             p:nth-child(2){
-            font-size: 70px;
+            font-size: 60px;
             color: $text-color;
             font-family: montserrat;
             font-weight: map-get($font-weight, bold);
@@ -127,7 +128,7 @@ span{
 
             p{
                 color: $text-color;
-                font-size: 30px;
+                font-size: 20px;
                 font-family: 'Reenie Beanie', cursive;
             }
 
@@ -186,13 +187,17 @@ p{
 
 
 h2{
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     color: $text-color;
 }
 
 h3{
     color: $text-color;
 
+}
+
+button{
+    cursor: pointer;
 }
 
 
@@ -223,6 +228,7 @@ flex-basis: 10%;
     display: flex;
     flex-direction: column;
     row-gap: 1em;
+    
 
     #about_main_content{
 
@@ -295,7 +301,7 @@ flex-basis: 10%;
         p{
             padding-left: 1em;
             font-family: 'Reenie Beanie', cursive;
-            font-size:35px;
+            font-size:20px;
             span{
                 color: $accent-color;
                 font-weight: 900;
@@ -449,14 +455,14 @@ flex-basis: 10%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                gap:.5em;
-                padding-left: 2em;
+                // gap:.5em;
+                // padding-left: 2em;
 
             }
         }
 
         #service_card_one, #service_card_three{
-            text-align: right
+            text-align: right;
 
         }
 
@@ -614,6 +620,36 @@ flex-basis: 10%;
 
 
     }
+//  ***************News_letters Section**********************
+#news_letters{
+    padding: 2em;
+    line-height: 2em;
+    // padding-bottom: 2em;
+    background-color: white;
+
+    form{
+    // padding: 2em;
+    // background-color: $text-color;
+    // color: white;
+      
+        input{
+       height: 3em;
+       width: 60%;
+        }
+
+
+        button{
+            background-color: $text-color;
+            color: white;
+            font-family: Montserrat;
+       height: 3em;
+       width: 30%;
+       cursor: pointer;
+
+            // flex:1;
+        }
+    }
+}
 
 
 //  ***************Form Section**********************
