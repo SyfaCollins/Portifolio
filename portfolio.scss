@@ -57,6 +57,9 @@ span{
         justify-content: space-between;
         flex:2;
         background-color: white;
+        box-shadow:  inset 1px -2px 4px $text-color;
+
+
 
         // *********title in the Header***********
 
@@ -94,8 +97,8 @@ span{
             
             button{
 
-                background-color: $accent-color;
-                background:linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(9, 10, 63, 0.863));
+                // background-color: $accent-color;
+                // background:linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(9, 10, 63, 0.863));
                 padding:1em;
                 margin-top: 2em;
                 font-size: 18px;
@@ -181,13 +184,16 @@ span{
 p{
     
     font-family: 'Source Serif Pro', serif;
-    font-size: 15px;
+    font-size: 18px;
+}
+
+.emojis{
+    font-size: 30px;
 }
 
 
-
 h2{
-    // margin-bottom: 1em;
+    margin-bottom: 1em;
     color: $text-color;
 }
 
@@ -198,6 +204,9 @@ h3{
 
 button{
     cursor: pointer;
+    box-shadow:          1px 2px 5px $text-color;
+    background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
+
 }
 
 
@@ -622,10 +631,14 @@ flex-basis: 10%;
     }
 //  ***************News_letters Section**********************
 #news_letters{
+    // margin: 2px;
+    z-index: 2;
     padding: 2em;
     line-height: 2em;
     // padding-bottom: 2em;
     background-color: white;
+    box-shadow:  0px 0px 5px $text-color;
+    // box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
 
     form{
     // padding: 2em;
@@ -639,12 +652,12 @@ flex-basis: 10%;
 
 
         button{
-            background-color: $text-color;
+         
             color: white;
             font-family: Montserrat;
-       height: 3em;
-       width: 30%;
-       cursor: pointer;
+            height: 3em;
+            width: 30%;
+            cursor: pointer;
 
             // flex:1;
         }
@@ -657,6 +670,9 @@ flex-basis: 10%;
     footer{
         background: $text-color;
         padding: 3em;
+        // box-shadow: 1px 2px 5px white;
+       
+
     }
 
 
