@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
-@import url('mobile.scss');
+// @import url('mobile.scss');
 
 $primary-color:#efe8e8;
 $tanciary-color:#1c9394;
@@ -124,6 +124,82 @@ span{
             }
         }
 
+
+        //*************pop_up*********************
+
+        #pop_up{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // visibility: hidden;
+
+            background-color: $primary-color;
+            border: 4px dotted $text-color;
+            border-radius: 5px;
+            padding: 2em;
+            margin: 2em;
+            height: 30em;
+            align-items: center;
+            // text-align: center;
+            top: 5em;
+            left: 10em;
+            box-shadow: 3px 4px 10px $text-color;
+
+            #close_button{
+                padding: 5px;
+                color: white;
+                align-self: flex-end;
+            }
+
+            h2{
+                font-size: 40px;
+                border-bottom: 1px solid $text-color;
+                width: 100%;
+                text-align: center;
+            }
+        
+            p{
+                width: 30em;
+                cursor: pointer;
+
+            }
+            #contact_platform{
+                display: flex;
+                gap: 2em;
+                padding: 1em;
+                margin-top: 1em;
+                
+
+            .platform{
+
+
+                svg{
+                    height: 4em;
+                    transition: 1s .1s cubic-bezier(1, 0, 0, 1);
+                    cursor: pointer;
+                    
+
+                }
+
+
+                svg:hover{
+                    padding: 1em;
+                    box-shadow: 1px 1px 5px $text-color;
+                    transition: 1s .1s cubic-bezier(1, 0, 0, 1);
+    
+                }
+            }
+
+          
+         
+            }
+        }
+
+        // #pop_up::before{
+        //     background-color: black;
+        // }
+
         // *********footer in the Header***********
 
         #footer{
@@ -147,15 +223,16 @@ span{
                             
                 svg{
             
-                    width: 30px;
+                    width: 20px;
                     cursor: pointer;
-                    fill: $hover-color ;
-                   -webkit-backdrop-filter: drop-shadow(20%);
+                    fill:$text-color;
+
+                  
 
 
                     &:hover {
-                    fill:$text-color;
-                        color:$text-color;
+                    fill: $hover-color ;
+
                     }
 
                   
@@ -184,7 +261,7 @@ span{
 p{
     
     font-family: 'Source Serif Pro', serif;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .emojis{
@@ -206,6 +283,7 @@ button{
     cursor: pointer;
     box-shadow:          1px 2px 5px $text-color;
     background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
+    border: none;
 
 }
 
@@ -467,6 +545,11 @@ flex-basis: 10%;
                 // gap:.5em;
                 // padding-left: 2em;
 
+                p{
+                    // font-size: 15px;
+
+                }
+
             }
         }
 
@@ -640,6 +723,10 @@ flex-basis: 10%;
     box-shadow:  0px 0px 5px $text-color;
     // box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
 
+    h2{
+        margin:0;
+    }
+
     form{
     // padding: 2em;
     // background-color: $text-color;
@@ -662,8 +749,8 @@ flex-basis: 10%;
             // flex:1;
         }
     }
-}
 
+}
 
 //  ***************Form Section**********************
 
@@ -674,12 +761,3 @@ flex-basis: 10%;
        
 
     }
-
-
-
-
-
-        
-
-
-

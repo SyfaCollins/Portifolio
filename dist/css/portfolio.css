@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
-@import url("mobile.scss");
 * {
   margin: 0;
   padding: 0;
@@ -126,6 +125,76 @@ span {
   width: 300px;
 }
 
+#main_text_container #pop_up {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #efe8e8;
+  border: 4px dotted #15193a;
+  border-radius: 5px;
+  padding: 2em;
+  margin: 2em;
+  height: 30em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 5em;
+  left: 10em;
+  -webkit-box-shadow: 3px 4px 10px #15193a;
+          box-shadow: 3px 4px 10px #15193a;
+}
+
+#main_text_container #pop_up #close_button {
+  padding: 5px;
+  color: white;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#main_text_container #pop_up h2 {
+  font-size: 40px;
+  border-bottom: 1px solid #15193a;
+  width: 100%;
+  text-align: center;
+}
+
+#main_text_container #pop_up p {
+  width: 30em;
+  cursor: pointer;
+}
+
+#main_text_container #pop_up #contact_platform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+#main_text_container #pop_up #contact_platform .platform svg {
+  height: 4em;
+  -webkit-transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
+  transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
+  cursor: pointer;
+}
+
+#main_text_container #pop_up #contact_platform .platform svg:hover {
+  padding: 1em;
+  -webkit-box-shadow: 1px 1px 5px #15193a;
+          box-shadow: 1px 1px 5px #15193a;
+  -webkit-transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
+  transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
+}
+
 #main_text_container #footer {
   text-align: center;
 }
@@ -151,20 +220,18 @@ span {
 }
 
 #main_text_container #footer #dev_figure1 svg {
-  width: 30px;
+  width: 20px;
   cursor: pointer;
-  fill: rgba(21, 25, 58, 0.671);
-  -webkit-backdrop-filter: drop-shadow(20%);
+  fill: #15193a;
 }
 
 #main_text_container #footer #dev_figure1 svg:hover {
-  fill: #15193a;
-  color: #15193a;
+  fill: rgba(21, 25, 58, 0.671);
 }
 
 p {
   font-family: 'Source Serif Pro', serif;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .emojis {
@@ -186,6 +253,7 @@ button {
           box-shadow: 1px 2px 5px #15193a;
   background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
   background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
+  border: none;
 }
 
 #scroll_section {
@@ -595,6 +663,10 @@ button {
   background-color: white;
   -webkit-box-shadow: 0px 0px 5px #15193a;
           box-shadow: 0px 0px 5px #15193a;
+}
+
+#news_letters h2 {
+  margin: 0;
 }
 
 #news_letters form input {

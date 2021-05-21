@@ -1,0 +1,28 @@
+#trigger{
+    padding: 2em;
+    background-color: yellow;
+    border: none;
+    box-shadow: 1px 1px 5px red;
+    cursor: pointer;
+}
+
+#popUp{
+    display: none;
+    margin-top: 1em;
+    width: 40%;
+    height: 250px;
+    padding: 5em;
+    background-color:thistle;
+}
+
+p{
+    display: inherit;
+    position: relative;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#popUp{
+    transition: 2s 2s cubic-bezier(1, 0, 0, 1);
+}
