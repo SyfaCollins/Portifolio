@@ -122,14 +122,12 @@ span {
 }
 
 #main_text_container #title button:hover {
-  width: 300px;
+  width: 7em;
 }
 
 #main_text_container #pop_up {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -146,10 +144,11 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 5em;
-  left: 10em;
+  top: 50px;
+  left: 50px;
   -webkit-box-shadow: 3px 4px 10px #15193a;
           box-shadow: 3px 4px 10px #15193a;
+  z-index: 4;
 }
 
 #main_text_container #pop_up #close_button {
@@ -187,12 +186,17 @@ span {
   cursor: pointer;
 }
 
+#main_text_container #pop_up #contact_platform .platform svg path {
+  fill: #15193a;
+}
+
 #main_text_container #pop_up #contact_platform .platform svg:hover {
   padding: 1em;
+  border-radius: 50%;
   -webkit-box-shadow: 1px 1px 5px #15193a;
           box-shadow: 1px 1px 5px #15193a;
-  -webkit-transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
-  transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
+  -webkit-transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
+  transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
 }
 
 #main_text_container #footer {
@@ -210,7 +214,8 @@ span {
   display: -ms-flexbox;
   display: flex;
   border-top: 1px solid rgba(21, 25, 58, 0.671);
-  border-width: 20;
+  border-width: 2px;
+  border-color: #15193a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -220,7 +225,7 @@ span {
 }
 
 #main_text_container #footer #dev_figure1 svg {
-  width: 20px;
+  width: 1em;
   cursor: pointer;
   fill: #15193a;
 }
@@ -254,6 +259,45 @@ button {
   background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
   background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
   border: none;
+}
+
+#mentorshipPage {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 5;
+  position: absolute;
+  background-color: #efe8e8;
+  border: 2px solid #15193a;
+  height: 100vh;
+  width: auto;
+  top: 2em;
+  left: 2em;
+  right: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: scroll;
+}
+
+#mentorshipPage h2 {
+  background-color: red;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.904)), to(rgba(19, 21, 146, 0.801))), url("Svgs/sigmund-9aSH7CauB9Y-unsplash.jpg");
+  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(19, 21, 146, 0.801)), url("Svgs/sigmund-9aSH7CauB9Y-unsplash.jpg");
+  padding: 3em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+}
+
+#mentorshipPage .tenor-gif-embed {
+  height: 240px;
 }
 
 #scroll_section {
@@ -427,6 +471,12 @@ button {
   border-collapse: collapse;
   color: #efe8e8;
   border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#done_projects #projects_card_wrapper .project-card .card_description button:hover {
+  width: 5em;
 }
 
 #skill_container {
@@ -463,18 +513,15 @@ button {
   background: #15193a;
   border-radius: 50px;
   width: 100%;
+  opacity: 50%;
 }
 
-#skill_container ul li li:nth-child(2) {
-  width: 20%;
-}
-
-#skill_container ul .level-bar:nth-child(4) {
-  width: 50%;
-}
-
-#skill_container ul .level-bar:nth-child(5) {
-  width: 20%;
+#skill_container ul li .bar1::after {
+  content: " ";
+  width: inherit;
+  padding: 3px;
+  opacity: 100%;
+  background: #15193a;
 }
 
 #services {
@@ -603,6 +650,8 @@ button {
   border-collapse: collapse;
   color: #efe8e8;
   border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 #form_Section .form-container form label {
@@ -680,6 +729,12 @@ button {
   height: 3em;
   width: 30%;
   cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+#news_letters form button:hover {
+  width: 25%;
 }
 
 footer {
