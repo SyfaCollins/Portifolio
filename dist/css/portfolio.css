@@ -270,7 +270,6 @@ button {
   z-index: 5;
   position: absolute;
   background-color: #efe8e8;
-  border: 2px solid #15193a;
   height: 100vh;
   width: auto;
   top: 2em;
@@ -280,14 +279,15 @@ button {
       -ms-flex-align: center;
           align-items: center;
   overflow-y: scroll;
+  border-radius: 10px;
 }
 
 #mentorshipPage h2 {
   background-color: red;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.904)), to(rgba(19, 21, 146, 0.801))), url("Svgs/sigmund-9aSH7CauB9Y-unsplash.jpg");
-  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(19, 21, 146, 0.801)), url("Svgs/sigmund-9aSH7CauB9Y-unsplash.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.712)), to(rgba(19, 21, 146, 0.712))), url("media/mentorship.jpg");
+  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.712), rgba(19, 21, 146, 0.712)), url("media/mentorship.jpg");
   padding: 3em;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -296,8 +296,10 @@ button {
   color: white;
 }
 
-#mentorshipPage .tenor-gif-embed {
-  height: 240px;
+#mentorshipPage #go_back {
+  position: relative;
+  left: 0;
+  background-color: red;
 }
 
 #scroll_section {
@@ -384,7 +386,7 @@ button {
   font-weight: 400;
 }
 
-#about_section #designer_figure nav p:nth-child(2) {
+#about_section #designer_figure nav #mentorShip {
   border: 2px solid #E08414;
   padding: 5px;
   border-radius: 100px;
@@ -394,7 +396,7 @@ button {
   opacity: 60%;
 }
 
-#about_section #designer_figure nav p:nth-child(2):hover {
+#about_section #designer_figure nav #mentorShip:hover {
   opacity: 100%;
 }
 

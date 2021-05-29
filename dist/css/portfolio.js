@@ -22,5 +22,20 @@ hire_me.addEventListener('click',show)
 
 close_button.addEventListener('click',hide)
 
+// mentorShip Page
+
+let mentorShip_button = document.getElementById('mentorShip');
+let mentorShip_page = document.querySelector('#mentorshipPage')
+
+
+function showMentorShipPage(){
+    mentorShip_page.style.display = 'flex'
+    console.log('i was clicked')
+    // pop_up.style.transition= '5s 1s cubic-bezier(1, 0, 0, 1)'
+
+
+}
+
+mentorShip_button.addEventListener('click' , showMentorShipPage)
 
 
