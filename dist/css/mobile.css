@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
     margin: 0;
     padding: 0;
@@ -17,27 +17,34 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-  }
   #main_text_container {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-shadow: none;
             box-shadow: none;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
     width: 100%;
+    z-index: 6;
   }
   #main_text_container #title {
-    display: block;
+    display: inline-block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 1em;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -133,8 +140,104 @@
     -webkit-transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
     transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
   }
+  #main_text_container #scroll_section {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    line-height: 1.5em;
+    margin-top: 10px;
+  }
   #main_text_container #footer {
     display: none;
+  }
+  #services {
+    padding: 2em;
+    background: white;
+    padding-right: 1em;
+    -webkit-backdrop-filter: drop-shadow(4px 4px 10px blue);
+            backdrop-filter: drop-shadow(4px 4px 10px blue);
+    display: block;
+  }
+  #services #service_cards_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  #services #service_cards_wrapper .service-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  #services #service_cards_wrapper .service-card .card_description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: .5em;
+    padding-left: .5em;
+  }
+  #services #service_cards_wrapper .service-card .card_description p {
+    font-size: 15px;
+  }
+  #services #service_cards_wrapper #service_card_one, #services #service_cards_wrapper #service_card_three {
+    text-align: start;
+  }
+  #services #service_cards_wrapper .card-row_reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #services #service_cards_wrapper img {
+    height: 200px;
+    width: auto;
+  }
+  #show_offs {
+    padding: 2em;
+  }
+  #show_offs span {
+    font-weight: 400;
+  }
+  #show_offs #gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #show_offs #gallery .img-container img {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 /*# sourceMappingURL=mobile.css.map */
