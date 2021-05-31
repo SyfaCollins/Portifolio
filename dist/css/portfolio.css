@@ -566,6 +566,12 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: .5em;
+  padding-left: 2em;
+}
+
+#services #service_cards_wrapper .service-card .card_description p {
+  font-size: 15px;
 }
 
 #services #service_cards_wrapper #service_card_one, #services #service_cards_wrapper #service_card_three {

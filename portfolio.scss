@@ -26,6 +26,8 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
     box-sizing: border-box;
 }
 
+// @media(min-width:500px){
+
 body{
     display: flex;
     flex-direction: row;
@@ -601,15 +603,16 @@ flex-basis: 10%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                // gap:.5em;
-                // padding-left: 2em;
+                gap:.5em;
+                padding-left: 2em;
 
                 p{
-                    // font-size: 15px;
+                    font-size: 15px;
 
                 }
 
             }
+            
         }
 
         #service_card_one, #service_card_three{
@@ -729,26 +732,24 @@ flex-basis: 10%;
 }
     
 
-#show_offs{
-
-    padding:2em;
-
-        span{
-            font-weight: map-get($font-weight, medium);
-        }
-}
 
 //  ***************show_offs Section**********************
 
 
 #show_offs{
 
+     padding:2em;
+
+    span{
+        font-weight: map-get($font-weight, medium);
+    }
+
         #gallery{
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 2em;
-            
-       
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2em;
+        
+    
             .img-container img{
                 width:100%;
                 height:350px ;
@@ -757,7 +758,6 @@ flex-basis: 10%;
                 transition: all 1s;
                 transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 
-             
 
             }
 
@@ -768,13 +768,15 @@ flex-basis: 10%;
 
                 
 
-                }
+            }
 
 
         }
 
 
     }
+
+    
 //  ***************News_letters Section**********************
 #news_letters{
     // margin: 2px;
@@ -825,3 +827,5 @@ flex-basis: 10%;
         padding: 3em;
 
     }
+
+// }

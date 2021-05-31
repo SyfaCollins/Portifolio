@@ -20,36 +20,38 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
 
 
-@media(max-width:400px){
+@media(max-width:500px){
 
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    
-    flex-direction: column;
-    
-}
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        
+    }
 
-header{
-    height: max-content;
-}
 
     #main_text_container{
         position: absolute;
+        display: flex;
+        flex: 2;
+        height: auto;
+        flex-direction: column;
         // background-color: red;
         box-shadow:none;
-        height: max-content;
         width: 100%;
+        z-index: 6;
 
 
         // *********title in the Header***********
 
         #title{
 
-            display: block;
+            display: inline-block;
+
             flex-direction: column;
             padding: 1em;
+            height: max-content;
             width: max-content;
         
 
@@ -63,10 +65,10 @@ header{
         
             }
 
-            p > span{
+            // p > span{
                 
                 
-            }
+            // }
 
             
 
@@ -180,6 +182,24 @@ header{
             }
         }
 
+
+// *****************Scroll SECTION*****************
+
+#scroll_section{
+    // flex: 2;
+    flex-basis: auto;
+        overflow-y:  scroll;
+        scroll-behavior: smooth;
+        // row-gap: 3em;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5em;
+        margin-top:10px;
+    
+       
+    
+    }
+    
      
         // *********footer in the Header***********
 
@@ -196,7 +216,94 @@ header{
 
 
 
+// ***************Services**********************
 
+    #services{
+        padding:2em;
+        background: white;
+        padding-right: 1em;
+        backdrop-filter: drop-shadow(4px 4px 10px blue);
+        display: block;
+        // height: 100vh;
+        // flex-direction: column; 
+        
+        #service_cards_wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        
+            .service-card{
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+        
+                    
+                .card_description{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap:.5em;
+                    padding-left: .5em;
+    
+                    p{
+                        font-size: 15px;
+    
+                    }
+    
+                }
+
+            }
+        
+            #service_card_one, #service_card_three{
+                text-align: start
+    
+            }
+    
+            .card-row_reverse{
+                flex-direction: column;
+        
+            }
+    
+            img{
+    
+                height: 200px;
+                width: auto;
+            }
+        }
+        
+    }
+
+
+    //  ***************show_offs Section**********************
+
+
+#show_offs{
+
+    padding:2em;
+
+   span{
+       font-weight: map-get($font-weight, medium);
+   }
+
+       #gallery{
+         display: flex;
+         flex-direction: column;
+       
+   
+           .img-container img{
+               width:100%;
+               height:250px ;
+               object-fit: cover;
+               object-position: center;
+           
+
+           }
+
+
+       }
+
+
+   }
+
+    
 }
-
-
