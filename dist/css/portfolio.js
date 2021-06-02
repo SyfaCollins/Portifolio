@@ -26,6 +26,7 @@ close_button.addEventListener('click',hide)
 
 let mentorShip_button = document.getElementById('mentorShip');
 let mentorShip_page = document.querySelector('#mentorshipPage')
+let backToHome = document.getElementById('go_back')
 
 
 function showMentorShipPage(){
@@ -39,3 +40,4 @@ function showMentorShipPage(){
 mentorShip_button.addEventListener('click' , showMentorShipPage)
 
 
+//Mentor

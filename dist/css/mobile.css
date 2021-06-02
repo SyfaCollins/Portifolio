@@ -140,7 +140,10 @@
     -webkit-transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
     transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
   }
-  #main_text_container #scroll_section {
+  #main_text_container #footer {
+    display: none;
+  }
+  #scroll_section {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     overflow-y: scroll;
@@ -155,10 +158,69 @@
     line-height: 1.5em;
     margin-top: 10px;
   }
-  #main_text_container #footer {
-    display: none;
+  #scroll_section #done_projects {
+    padding: 0 2em;
   }
-  #services {
+  #scroll_section #done_projects #projects_card_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+    overflow-y: scroll;
+  }
+  #scroll_section #done_projects #projects_card_wrapper .project-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+  }
+  #scroll_section #done_projects #projects_card_wrapper .project-card > img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: inherit;
+       object-position: inherit;
+  }
+  #scroll_section #done_projects #projects_card_wrapper .project-card .project-card:nth-child(1) {
+    display: none;
+    padding: 10em;
+    background: url("Profpic-.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  #scroll_section #done_projects #projects_card_wrapper .project-card .card_description {
+    background: white;
+    text-align: center;
+    height: auto;
+    padding: .5em 0;
+    border-radius: 0 0 20px 20px;
+  }
+  #scroll_section #done_projects #projects_card_wrapper .project-card .card_description button {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
+    background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
+    padding: .5em 2em;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Montserrat;
+    border-collapse: collapse;
+    color: #efe8e8;
+    border: none;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  #scroll_section #done_projects #projects_card_wrapper .project-card .card_description button:hover {
+    width: 5em;
+  }
+  #scroll_section #services {
     padding: 2em;
     background: white;
     padding-right: 1em;
@@ -166,7 +228,7 @@
             backdrop-filter: drop-shadow(4px 4px 10px blue);
     display: block;
   }
-  #services #service_cards_wrapper {
+  #scroll_section #services #service_cards_wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -176,7 +238,7 @@
             flex-direction: column;
     gap: 2em;
   }
-  #services #service_cards_wrapper .service-card {
+  #scroll_section #services #service_cards_wrapper .service-card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -186,7 +248,7 @@
             flex-direction: column;
     gap: 2em;
   }
-  #services #service_cards_wrapper .service-card .card_description {
+  #scroll_section #services #service_cards_wrapper .service-card .card_description {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -200,29 +262,29 @@
     gap: .5em;
     padding-left: .5em;
   }
-  #services #service_cards_wrapper .service-card .card_description p {
+  #scroll_section #services #service_cards_wrapper .service-card .card_description p {
     font-size: 15px;
   }
-  #services #service_cards_wrapper #service_card_one, #services #service_cards_wrapper #service_card_three {
+  #scroll_section #services #service_cards_wrapper #service_card_one, #scroll_section #services #service_cards_wrapper #service_card_three {
     text-align: start;
   }
-  #services #service_cards_wrapper .card-row_reverse {
+  #scroll_section #services #service_cards_wrapper .card-row_reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #services #service_cards_wrapper img {
+  #scroll_section #services #service_cards_wrapper img {
     height: 200px;
     width: auto;
   }
-  #show_offs {
+  #scroll_section #show_offs {
     padding: 2em;
   }
-  #show_offs span {
+  #scroll_section #show_offs span {
     font-weight: 400;
   }
-  #show_offs #gallery {
+  #scroll_section #show_offs #gallery {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -231,7 +293,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #show_offs #gallery .img-container img {
+  #scroll_section #show_offs #gallery .img-container img {
     width: 100%;
     height: 250px;
     -o-object-fit: cover;
