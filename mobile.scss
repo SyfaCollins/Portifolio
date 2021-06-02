@@ -149,45 +149,54 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
                 
 
-            .platform{
+                .platform{
 
 
-      
+        
 
-                svg{
-                    height: 4em;
-                    transition: 1s .1s cubic-bezier(1, 0, 0, 1);
-                    cursor: pointer;
+                    svg{
+                        height: 4em;
+                        transition: 1s .1s cubic-bezier(1, 0, 0, 1);
+                        cursor: pointer;
 
-                    path{
-                        fill: $text-color;
+                        path{
+                            fill: $text-color;
+                        }
+                        
+
                     }
-                    
 
+
+
+                    svg:hover{
+                        padding: 1em;
+                        border-radius: 50%;
+                        box-shadow: 1px 1px 5px $text-color;
+                        transition: .5s .1s cubic-bezier(1, 0, 0, 1);
+        
+                    }
                 }
-
-
-
-                svg:hover{
-                    padding: 1em;
-                    border-radius: 50%;
-                    box-shadow: 1px 1px 5px $text-color;
-                    transition: .5s .1s cubic-bezier(1, 0, 0, 1);
-    
-                }
-            }
-
-          
          
             }
+
         }
+
+        // *********footer in the Header***********
+
+        #footer{
+            display: none;
+
+
+        }
+
+    }
+
 
 
 // *****************Scroll SECTION*****************
 
-#scroll_section{
-    // flex: 2;
-    flex-basis: auto;
+    #scroll_section{
+        flex-basis: auto;
         overflow-y:  scroll;
         scroll-behavior: smooth;
         // row-gap: 3em;
@@ -196,24 +205,74 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
         line-height: 1.5em;
         margin-top:10px;
     
-       
+
+// *******************done_projects***************
+
+    #done_projects{
+    padding:0 2em;
     
-    }
+
+        #projects_card_wrapper{
+            display: flex;
+            flex-direction: column;
+            column-gap: 1em;
+            overflow-y:scroll;
+
+
+            .project-card{
+                display:flex;
+                flex-direction: column;
+                width: auto;
+
+        
+
+                & > img{
+                    object-fit: cover;
+                    object-position: inherit;
+                    
+                
+                }
+
+                .project-card:nth-child(1){
+                display: none;
+                padding: 10em;
+                background:url('Profpic-.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top center;
+                }
+         
+
+                .card_description{
+                    background: white;
+                    text-align: center;
+                    height: auto;
+                    padding: .5em 0;
+                    border-radius:0 0 20px 20px;
+
+                    button{
     
-     
-        // *********footer in the Header***********
+                    background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
+                    padding:.5em 2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: Montserrat;
+                    border-collapse: collapse;
+                    color: $primary-color;
+                    border: none;
+                    transition: .5s;
 
-        #footer{
-            display: none;
+                        &:hover{
+                            width: 5em;
 
+                        }
 
+                    }
+                }
+            }
         }
-    
-
 
     }
-
-
 
 
 // ***************Services**********************
@@ -274,10 +333,10 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
     }
 
 
-    //  ***************show_offs Section**********************
+//  ***************show_offs Section**********************
 
 
-#show_offs{
+    #show_offs{
 
     padding:2em;
 
@@ -306,4 +365,6 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
    }
 
     
+    }
+
 }

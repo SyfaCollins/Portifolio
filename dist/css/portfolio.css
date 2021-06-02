@@ -71,7 +71,7 @@ span {
 }
 
 #main_text_container #title p:nth-child(2) {
-  font-size: 60px;
+  font-size: 95px;
   color: #15193a;
   font-family: montserrat;
   font-weight: 700;
@@ -132,19 +132,24 @@ span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: #efe8e8;
   border: 4px dotted #15193a;
   border-radius: 5px;
   padding: 2em;
   margin: 2em;
-  height: 30em;
+  height: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   top: 50px;
+  bottom: 50px;
+  right: 50px;
   left: 50px;
   -webkit-box-shadow: 3px 4px 10px #15193a;
           box-shadow: 3px 4px 10px #15193a;
@@ -197,6 +202,20 @@ span {
           box-shadow: 1px 1px 5px #15193a;
   -webkit-transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
   transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
+}
+
+#main_text_container #pop_up::before {
+  content: ' ';
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.733);
+  cursor: pointer;
 }
 
 #main_text_container #footer {
@@ -261,12 +280,40 @@ button {
   border: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #15193a;
+          box-shadow: inset 0 0 5px #15193a;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.787)));
+  background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.787));
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
 #mentorshipPage {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   z-index: 5;
   position: absolute;
   background-color: #efe8e8;
@@ -502,28 +549,64 @@ button {
 #skill_container ul li {
   margin-bottom: 1em;
   list-style-type: none;
-  font-family: Montserrat;
   background: white;
-  width: auto;
   margin-right: 5em;
   padding: .5em;
+  -webkit-transition: 0.2s 0.1s cubic-bezier(1, 0, 0, 1);
+  transition: 0.2s 0.1s cubic-bezier(1, 0, 0, 1);
+}
+
+#skill_container ul li:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(156, 156, 156, 0.5);
+          box-shadow: 0px 0px 5px rgba(156, 156, 156, 0.5);
 }
 
 #skill_container ul li .level-bar {
-  height: 3px;
+  display: block;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   margin-right: 50%;
-  background: #15193a;
+  background: rgba(156, 156, 156, 0.5);
   border-radius: 50px;
   width: 100%;
-  opacity: 50%;
 }
 
-#skill_container ul li .bar1::after {
-  content: " ";
-  width: inherit;
-  padding: 3px;
+#skill_container ul li .level-bar span {
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.787)));
+  background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.787));
+  -webkit-box-shadow: 0px 0px 5px rgba(156, 156, 156, 0.5);
+          box-shadow: 0px 0px 5px rgba(156, 156, 156, 0.5);
+  height: 10px;
+  border-radius: 50px;
   opacity: 100%;
-  background: #15193a;
+}
+
+#skill_container ul li .level-bar .html {
+  width: 95%;
+}
+
+#skill_container ul li .level-bar .css {
+  width: 90%;
+}
+
+#skill_container ul li .level-bar .react {
+  width: 60%;
+}
+
+#skill_container ul li .level-bar .javascript {
+  width: 80%;
+}
+
+#skill_container ul li .level-bar .php {
+  width: 40%;
+}
+
+#skill_container ul li p {
+  font-size: 20px;
+  color: #15193a;
+  font-weight: 700;
 }
 
 #services {
