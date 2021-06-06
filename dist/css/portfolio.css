@@ -208,31 +208,17 @@ span {
   transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
 }
 
-#main_text_container #pop_up::before {
-  content: ' ';
-  z-index: 1;
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.733);
-  cursor: pointer;
-}
-
-#main_text_container #footer, #main_text_container #footer_mobile {
+#main_text_container #footer {
   text-align: center;
 }
 
-#main_text_container #footer p, #main_text_container #footer_mobile p {
+#main_text_container #footer p {
   color: #15193a;
   font-size: 20px;
   font-family: 'Reenie Beanie', cursive;
 }
 
-#main_text_container #footer #dev_figure1, #main_text_container #footer_mobile #dev_figure1 {
+#main_text_container #footer #dev_figure1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,13 +233,13 @@ span {
   padding-top: 5px;
 }
 
-#main_text_container #footer #dev_figure1 svg, #main_text_container #footer_mobile #dev_figure1 svg {
+#main_text_container #footer #dev_figure1 svg {
   width: 1em;
   cursor: pointer;
   fill: #15193a;
 }
 
-#main_text_container #footer #dev_figure1 svg:hover, #main_text_container #footer_mobile #dev_figure1 svg:hover {
+#main_text_container #footer #dev_figure1 svg:hover {
   fill: rgba(21, 25, 58, 0.671);
 }
 
@@ -408,7 +394,6 @@ button {
   background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(11, 12, 87, 0.596)), url("Profpic-.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
   background-attachment: fixed;
   height: 20em;
 }
@@ -776,14 +761,15 @@ button {
 #show_offs #gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  gap: 2em;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 3em;
+  padding: 3em;
 }
 
 #show_offs #gallery .img-container img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -836,5 +822,9 @@ button {
 footer {
   background: #15193a;
   padding: 3em;
+}
+
+#footer_mobile {
+  display: none;
 }
 /*# sourceMappingURL=portfolio.css.map */
