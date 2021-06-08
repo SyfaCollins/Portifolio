@@ -390,10 +390,11 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.904)), to(rgba(11, 12, 87, 0.596))), url("Profpic-.jpg");
-  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(11, 12, 87, 0.596)), url("Profpic-.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.6)), to(rgba(11, 12, 87, 0.6))), url("Profpic-.jpg");
+  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.6), rgba(11, 12, 87, 0.6)), url("Profpic-.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
   height: 20em;
 }
@@ -483,15 +484,6 @@ button {
      object-position: inherit;
 }
 
-#done_projects #projects_card_wrapper .project-card .project-card:nth-child(1) {
-  display: none;
-  padding: 10em;
-  background: url("Profpic-.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
 #done_projects #projects_card_wrapper .project-card .card_description {
   background: white;
   text-align: center;
@@ -503,19 +495,21 @@ button {
 #done_projects #projects_card_wrapper .project-card .card_description button {
   background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
   background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
-  padding: .5em 2em;
+  padding: .8em;
   border-radius: 5px;
   font-size: 18px;
   font-family: Montserrat;
   border-collapse: collapse;
   color: #efe8e8;
   border: none;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
 }
 
 #done_projects #projects_card_wrapper .project-card .card_description button:hover {
-  width: 5em;
+  width: 6em;
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
 }
 
 #skill_container {
@@ -733,6 +727,10 @@ button {
   border: none;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+#form_Section .form-container form button:hover {
+  width: 6em;
 }
 
 #form_Section .form-container form label {

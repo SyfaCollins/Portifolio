@@ -441,11 +441,11 @@ flex-basis: 10%;
         flex-direction: column;
         justify-content: space-between;
         color: white;
-        background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(11, 12, 87, 0.596)),
+        background-image: linear-gradient(to right, rgba(199, 79, 79, 0.600), rgba(11, 12, 87, 0.600)),
         url('Profpic-.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        // background-position:right;
+        background-position:center;
         background-attachment: fixed;
         height: 20em;
         // w
@@ -537,14 +537,14 @@ flex-basis: 10%;
             
             }
 
-            .project-card:nth-child(1){
-            display: none;
-            padding: 10em;
-            background:url('Profpic-.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-            }
+            // .project-card:nth-child(1){
+            // display: none;
+            // padding: 10em;
+            // background:url('Profpic-.jpg');
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: top center;
+            // }
          
 
             .card_description{
@@ -557,17 +557,18 @@ flex-basis: 10%;
                 button{
     
                 background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
-                padding:.5em 2em;
+                padding:.8em;
                 border-radius: 5px;
                 font-size: 18px;
                 font-family: Montserrat;
                 border-collapse: collapse;
                 color: $primary-color;
                 border: none;
-                transition: .5s;
+                transition: 1s 1s;
 
                 &:hover{
-                    width: 5em;
+                    width: 6em;
+                    transition: 1s 1s;
 
                 }
 
@@ -794,7 +795,7 @@ flex-basis: 10%;
                 transition: .5s;
 
                &:hover{
-
+                width: 6em;
                }
             }
 
