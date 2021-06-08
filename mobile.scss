@@ -215,8 +215,9 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
         #projects_card_wrapper{
             display: flex;
             flex-direction: column;
-            column-gap: 1em;
-            overflow-y:scroll;
+            gap: 1em;
+            // overflow-y:scroll;
+            overflow-x: hidden;
 
 
             .project-card{
@@ -236,7 +237,7 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
                 .project-card:nth-child(1){
                 display: none;
                 padding: 10em;
-                background:url('Profpic-.jpg');
+                // background:url('Profpic-.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: top center;
@@ -338,11 +339,11 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
     #show_offs{
 
-    padding:2em;
+        padding:2em;
 
-   span{
-       font-weight: map-get($font-weight, medium);
-   }
+        span{
+        font-weight: map-get($font-weight, medium);
+        }
 
        #gallery{
          display: flex;

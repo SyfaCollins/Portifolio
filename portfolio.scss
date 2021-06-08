@@ -77,7 +77,7 @@ span{
 
     
             p:nth-child(2){
-            font-size: 95px;
+            font-size: 92px;
             color: $text-color;
             font-family: montserrat;
             font-weight: map-get($font-weight, bold);
@@ -85,8 +85,16 @@ span{
             }
 
             p > span{
-                margin-left:-.3em;
+                // margin-left:-.3em;
                 font-weight: map-get($font-weight , regular );
+                
+    
+            }
+
+            .emoji{
+                font-size: 40px; 
+                display: inline;
+                
             }
 
             
@@ -214,21 +222,22 @@ span{
             }
         }
 
-        #pop_up::before{
-            content: ' ';
-            z-index: 1;
-            position: fixed;
-            // display: none;
-            bottom: 0;
-            top:0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.733);
-            cursor: pointer;
+        // #pop_up::before{
+        //     content: ' ';
+        //     z-index: 1;
+        //     position: fixed;
+        //     // display: none;
+        //     bottom: 0;
+        //     top:0;
+        //     left: 0;
+        //     right: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: rgba(0, 0, 0, 0.733);
+        //     cursor: pointer;
+        //     opacity: 30%;
 
-        }
+        // }
 
      
         // *********footer in the Header***********
@@ -313,14 +322,14 @@ h3{
 
 button{
     cursor: pointer;
-    box-shadow:          1px 2px 5px $text-color;
+    box-shadow:1px 2px 5px $text-color;
     background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
     border: none;
 
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
   }
   
   /* Track */
@@ -333,6 +342,7 @@ button{
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.787));
     border-radius: 10px;
+    width: 5px;
     cursor: pointer;
 
   }
@@ -431,13 +441,14 @@ flex-basis: 10%;
         flex-direction: column;
         justify-content: space-between;
         color: white;
-        background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(11, 12, 87, 0.596)),
+        background-image: linear-gradient(to right, rgba(199, 79, 79, 0.600), rgba(11, 12, 87, 0.600)),
         url('Profpic-.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: top center;
+        background-position:center;
         background-attachment: fixed;
         height: 20em;
+        // w
 
 
         nav{
@@ -526,14 +537,14 @@ flex-basis: 10%;
             
             }
 
-            .project-card:nth-child(1){
-            display: none;
-            padding: 10em;
-            background:url('Profpic-.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-            }
+            // .project-card:nth-child(1){
+            // display: none;
+            // padding: 10em;
+            // background:url('Profpic-.jpg');
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: top center;
+            // }
          
 
             .card_description{
@@ -546,17 +557,18 @@ flex-basis: 10%;
                 button{
     
                 background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
-                padding:.5em 2em;
+                padding:.8em;
                 border-radius: 5px;
                 font-size: 18px;
                 font-family: Montserrat;
                 border-collapse: collapse;
                 color: $primary-color;
                 border: none;
-                transition: .5s;
+                transition: 1s 1s;
 
                 &:hover{
-                    width: 5em;
+                    width: 6em;
+                    transition: 1s 1s;
 
                 }
 
@@ -783,7 +795,7 @@ flex-basis: 10%;
                 transition: .5s;
 
                &:hover{
-
+                width: 6em;
                }
             }
 
@@ -825,12 +837,13 @@ flex-basis: 10%;
         #gallery{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 2em;
+            gap: 3em;
+            padding: 3em;
         
     
             .img-container img{
-                width:100%;
-                height:350px ;
+                width: auto;
+                height:100px ;
                 object-fit: cover;
                 object-position: center;
                 transition: all 1s;
@@ -907,3 +920,10 @@ flex-basis: 10%;
     }
 
 // }
+
+
+//*************Mobile footer**************
+
+#footer_mobile{
+    display: none;
+}

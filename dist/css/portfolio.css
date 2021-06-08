@@ -71,15 +71,19 @@ span {
 }
 
 #main_text_container #title p:nth-child(2) {
-  font-size: 95px;
+  font-size: 92px;
   color: #15193a;
   font-family: montserrat;
   font-weight: 700;
 }
 
 #main_text_container #title p > span {
-  margin-left: -.3em;
   font-weight: 100;
+}
+
+#main_text_container #title .emoji {
+  font-size: 40px;
+  display: inline;
 }
 
 #main_text_container #title h1 {
@@ -204,20 +208,6 @@ span {
   transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
 }
 
-#main_text_container #pop_up::before {
-  content: ' ';
-  z-index: 1;
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.733);
-  cursor: pointer;
-}
-
 #main_text_container #footer {
   text-align: center;
 }
@@ -282,7 +272,7 @@ button {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 /* Track */
@@ -297,6 +287,7 @@ button {
   background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.787)));
   background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.787));
   border-radius: 10px;
+  width: 5px;
   cursor: pointer;
 }
 
@@ -399,11 +390,11 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.904)), to(rgba(11, 12, 87, 0.596))), url("Profpic-.jpg");
-  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.904), rgba(11, 12, 87, 0.596)), url("Profpic-.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.6)), to(rgba(11, 12, 87, 0.6))), url("Profpic-.jpg");
+  background-image: linear-gradient(to right, rgba(199, 79, 79, 0.6), rgba(11, 12, 87, 0.6)), url("Profpic-.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-attachment: fixed;
   height: 20em;
 }
@@ -493,15 +484,6 @@ button {
      object-position: inherit;
 }
 
-#done_projects #projects_card_wrapper .project-card .project-card:nth-child(1) {
-  display: none;
-  padding: 10em;
-  background: url("Profpic-.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
 #done_projects #projects_card_wrapper .project-card .card_description {
   background: white;
   text-align: center;
@@ -513,19 +495,21 @@ button {
 #done_projects #projects_card_wrapper .project-card .card_description button {
   background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
   background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
-  padding: .5em 2em;
+  padding: .8em;
   border-radius: 5px;
   font-size: 18px;
   font-family: Montserrat;
   border-collapse: collapse;
   color: #efe8e8;
   border: none;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
 }
 
 #done_projects #projects_card_wrapper .project-card .card_description button:hover {
-  width: 5em;
+  width: 6em;
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
 }
 
 #skill_container {
@@ -745,6 +729,10 @@ button {
   transition: .5s;
 }
 
+#form_Section .form-container form button:hover {
+  width: 6em;
+}
+
 #form_Section .form-container form label {
   padding-bottom: 1em;
 }
@@ -773,12 +761,13 @@ button {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  gap: 2em;
+  gap: 3em;
+  padding: 3em;
 }
 
 #show_offs #gallery .img-container img {
-  width: 100%;
-  height: 350px;
+  width: auto;
+  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -831,5 +820,9 @@ button {
 footer {
   background: #15193a;
   padding: 3em;
+}
+
+#footer_mobile {
+  display: none;
 }
 /*# sourceMappingURL=portfolio.css.map */

@@ -169,9 +169,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-column-gap: 1em;
-            column-gap: 1em;
-    overflow-y: scroll;
+    gap: 1em;
+    overflow-x: hidden;
   }
   #scroll_section #done_projects #projects_card_wrapper .project-card {
     display: -webkit-box;
@@ -192,7 +191,6 @@
   #scroll_section #done_projects #projects_card_wrapper .project-card .project-card:nth-child(1) {
     display: none;
     padding: 10em;
-    background: url("Profpic-.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
