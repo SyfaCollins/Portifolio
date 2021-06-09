@@ -112,7 +112,7 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
         #pop_up{
             position: absolute;
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: space-between;
             background-color: $primary-color;
