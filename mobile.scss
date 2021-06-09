@@ -27,7 +27,6 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
         padding: 0;
         display: flex;
         flex-direction: column;
-        
     }
 
 
@@ -70,6 +69,13 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
                 
             // }
 
+            .emoji{
+                font-size: 30px; 
+                display: inline;
+                
+            }
+
+
             
 
             h1{
@@ -106,18 +112,19 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
         #pop_up{
             position: absolute;
-            display: none;
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
             background-color: $primary-color;
-            border: 4px dotted $text-color;
-            border-radius: 5px;
             padding: 2em;
             margin: 2em;
-            height: 30em;
+            height: max-content;
             align-items: center;
-            top: 50px;
-            left: 50px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            // transform: translate(-100px -50px);
             box-shadow: 3px 4px 10px $text-color;
             z-index: 4;
         
@@ -136,11 +143,7 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
                 text-align: center;
             }
         
-            p{
-                width: 30em;
-                cursor: pointer;
-
-            }
+    
             #contact_platform{
                 display: flex;
                 gap: 2em;
@@ -155,7 +158,7 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
         
 
                     svg{
-                        height: 4em;
+                        height: 2em;
                         transition: 1s .1s cubic-bezier(1, 0, 0, 1);
                         cursor: pointer;
 
@@ -347,12 +350,13 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
        #gallery{
          display: flex;
+         gap: 3em;
          flex-direction: column;
        
    
            .img-container img{
-               width:100%;
-               height:250px ;
+               width:150px;
+               height:auto ;
                object-fit: cover;
                object-position: center;
            
