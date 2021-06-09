@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
-// @import url('mobile.scss');
+
 
 $primary-color:#efe8e8;
 $tanciary-color:#1c9394;
@@ -142,20 +142,20 @@ span{
             position: absolute;
             display: none;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-around;
             background-color: $primary-color;
-            border: 4px dotted $text-color;
-            border-radius: 5px;
+            border: 2px dotted $text-color;
+            border-radius: 10px;
             padding: 2em;
-            margin: 2em;
-            height: auto;
+            margin: 5em;
             flex: 1;
             align-items: center;
-            top: 50px;
-            bottom: 50px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
             // transform: translate(50% 50%);
-            right: 50px;
-            left: 50px;
+
             box-shadow: 3px 4px 10px $text-color;
             z-index: 4;
             
@@ -163,7 +163,7 @@ span{
 
 
             #close_button{
-                padding: 5px;
+                padding: 1em;
                 color: white;
                 align-self: flex-end;
             }
@@ -176,11 +176,9 @@ span{
             }
         
             p{
-                width: 30em;
-                cursor: pointer;
-
-
+               text-align: center;
             }
+            
             #contact_platform{
                 display: flex;
                 gap: 2em;
@@ -598,7 +596,7 @@ flex-basis: 10%;
                 margin-bottom: 1em;
                 list-style-type: none;
                 background: white;
-                margin-right: 5em;
+                margin-right: 2em;
                 padding: .5em;
                 transition: .2s .1s cubic-bezier(1, 0, 0, 1);
                 
