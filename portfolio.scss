@@ -436,17 +436,18 @@ flex-basis: 10%;
 
     #designer_figure{
         display: flex;
+        justify-self: flex-end;
         flex-direction: column;
         justify-content: space-between;
         color: white;
         background-image: linear-gradient(to right, rgba(199, 79, 79, 0.600), rgba(11, 12, 87, 0.600)),
         url('Profpic-.jpg');
-        background-size: cover;
+        background-size: 900px;
         background-repeat: no-repeat;
-        background-position:center;
+        background-position:right ;
         background-attachment: fixed;
-        height: 20em;
-        // w
+        height: 80vh;
+        
 
 
         nav{
