@@ -112,7 +112,7 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
 
         #pop_up{
             position: absolute;
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: space-between;
             background-color: $primary-color;
@@ -208,6 +208,78 @@ $font-weight:( "regular": 100, "medium": 400, "bold": 700);
         line-height: 1.5em;
         margin-top:10px;
     
+
+
+    #designer_figure{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        background-image: linear-gradient(to right, rgba(199, 79, 79, 0.600), rgba(11, 12, 87, 0.600)),
+        url('Profpic-.jpg');
+        background-size: 850px;
+        background-repeat: no-repeat;
+        background-position:center;
+        background-attachment: fixed;
+        height: 70vh;
+        width: 100%;
+        // w
+
+
+        nav{
+            display:flex;
+            gap:1em;
+            color: white;
+            background-color: $text-color;
+            height: 3em;
+            justify-content: flex-end;
+            padding-right: 1em;
+            align-items: center;
+            opacity: 75%;
+
+           & > p{
+    
+            font-family: Montserrat;
+            font-size: 18px;
+            cursor: pointer;
+
+            font-weight: map-get($font-weight, medium );
+            }
+
+            #mentorShip{
+                border: 2px solid $accent-color;
+                padding: 5px;
+                border-radius: 100px;
+                font-size: 18px;
+                font-family: Montserrat;
+                color: $primary-color;
+               opacity: 60%;
+
+                
+
+                &:hover{
+                    opacity: 100%;
+
+                }
+            }
+    
+        }
+
+       
+
+
+        p{
+            padding-left: 1em;
+            font-family: 'Reenie Beanie', cursive;
+            font-size:20px;
+            span{
+                color: $accent-color;
+                font-weight: 900;
+            }
+        }
+
+
+    }
 
 // *******************done_projects***************
 

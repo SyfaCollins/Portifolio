@@ -379,6 +379,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -389,11 +390,11 @@ button {
   color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 79, 79, 0.6)), to(rgba(11, 12, 87, 0.6))), url("Profpic-.jpg");
   background-image: linear-gradient(to right, rgba(199, 79, 79, 0.6), rgba(11, 12, 87, 0.6)), url("Profpic-.jpg");
-  background-size: cover;
+  background-size: 900px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-attachment: fixed;
-  height: 20em;
+  height: 80vh;
 }
 
 #about_section #designer_figure nav {
