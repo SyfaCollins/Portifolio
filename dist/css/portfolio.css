@@ -335,6 +335,7 @@ button {
   position: relative;
   left: 0;
   background-color: red;
+  cursor: pointer;
 }
 
 #scroll_section {

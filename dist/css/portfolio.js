@@ -37,7 +37,12 @@ function showMentorShipPage(){
 
 }
 
+function goBack(){
+    mentorShip_page.style.display = 'none'
+}
+
 mentorShip_button.addEventListener('click' , showMentorShipPage)
+backToHome.addEventListener('click', goBack)
 
 
 //Mentor
