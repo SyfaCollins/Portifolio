@@ -51,16 +51,16 @@ span{
 
 // *******RIGHT SECTION*************
 
-    // *******main_text_container**********
+    // *******welcome-section**********
 
-    #main_text_container{
+    #welcome-section{
         display :flex;
         flex-direction: column;
         justify-content: space-between;
         flex:2;
         background-color: white;
         box-shadow:  inset 1px -2px 4px $text-color;
-
+        height: 100vh;
 
 
         // *********title in the Header***********
@@ -250,7 +250,7 @@ span{
             }
 
 
-            #dev_figure1{
+            #profile-link{
                 display: flex;
                 border-top: 1px solid $hover-color;
                 border-width: 2px;
@@ -516,14 +516,14 @@ flex-basis: 10%;
     padding:0 2em;
     
 
-    #projects_card_wrapper{
+    #projects{
         display: flex;
         flex-direction: row;
         column-gap: 1em;
         overflow-x: scroll;
 
 
-        .project-card{
+        .project-tile{
             display:flex;
             flex-direction: column;
             width: 650px;
@@ -537,7 +537,7 @@ flex-basis: 10%;
             
             }
 
-            // .project-card:nth-child(1){
+            // .project-tile:nth-child(1){
             // display: none;
             // padding: 10em;
             // background:url('Profpic-.jpg');

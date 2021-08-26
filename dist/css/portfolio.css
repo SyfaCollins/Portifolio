@@ -33,7 +33,7 @@ span {
   font-weight: 400;
 }
 
-#main_text_container {
+#welcome-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,9 +50,10 @@ span {
   background-color: white;
   -webkit-box-shadow: inset 1px -2px 4px #15193a;
           box-shadow: inset 1px -2px 4px #15193a;
+  height: 100vh;
 }
 
-#main_text_container #title {
+#welcome-section #title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,23 +71,23 @@ span {
   padding-left: 2em;
 }
 
-#main_text_container #title p:nth-child(2) {
+#welcome-section #title p:nth-child(2) {
   font-size: 92px;
   color: #15193a;
   font-family: montserrat;
   font-weight: 700;
 }
 
-#main_text_container #title p > span {
+#welcome-section #title p > span {
   font-weight: 100;
 }
 
-#main_text_container #title .emoji {
+#welcome-section #title .emoji {
   font-size: 40px;
   display: inline;
 }
 
-#main_text_container #title h1 {
+#welcome-section #title h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +101,7 @@ span {
           justify-content: flex-end;
 }
 
-#main_text_container #title button {
+#welcome-section #title button {
   padding: 1em;
   margin-top: 2em;
   font-size: 18px;
@@ -125,11 +126,11 @@ span {
   text-align: center;
 }
 
-#main_text_container #title button:hover {
+#welcome-section #title button:hover {
   width: 7em;
 }
 
-#main_text_container #pop_up {
+#welcome-section #pop_up {
   position: absolute;
   display: none;
   -webkit-box-orient: vertical;
@@ -158,25 +159,25 @@ span {
   z-index: 4;
 }
 
-#main_text_container #pop_up #close_button {
+#welcome-section #pop_up #close_button {
   padding: 1em;
   color: white;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-#main_text_container #pop_up h2 {
+#welcome-section #pop_up h2 {
   font-size: 40px;
   border-bottom: 1px solid #15193a;
   width: 100%;
   text-align: center;
 }
 
-#main_text_container #pop_up p {
+#welcome-section #pop_up p {
   text-align: center;
 }
 
-#main_text_container #pop_up #contact_platform {
+#welcome-section #pop_up #contact_platform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,18 +186,18 @@ span {
   margin-top: 1em;
 }
 
-#main_text_container #pop_up #contact_platform .platform svg {
+#welcome-section #pop_up #contact_platform .platform svg {
   height: 4em;
   -webkit-transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
   transition: 1s 0.1s cubic-bezier(1, 0, 0, 1);
   cursor: pointer;
 }
 
-#main_text_container #pop_up #contact_platform .platform svg path {
+#welcome-section #pop_up #contact_platform .platform svg path {
   fill: #15193a;
 }
 
-#main_text_container #pop_up #contact_platform .platform svg:hover {
+#welcome-section #pop_up #contact_platform .platform svg:hover {
   padding: 1em;
   border-radius: 50%;
   -webkit-box-shadow: 1px 1px 5px #15193a;
@@ -205,17 +206,17 @@ span {
   transition: 0.5s 0.1s cubic-bezier(1, 0, 0, 1);
 }
 
-#main_text_container #footer {
+#welcome-section #footer {
   text-align: center;
 }
 
-#main_text_container #footer p {
+#welcome-section #footer p {
   color: #15193a;
   font-size: 20px;
   font-family: 'Reenie Beanie', cursive;
 }
 
-#main_text_container #footer #dev_figure1 {
+#welcome-section #footer #profile-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,13 +231,13 @@ span {
   padding-top: 5px;
 }
 
-#main_text_container #footer #dev_figure1 svg {
+#welcome-section #footer #profile-link svg {
   width: 1em;
   cursor: pointer;
   fill: #15193a;
 }
 
-#main_text_container #footer #dev_figure1 svg:hover {
+#welcome-section #footer #profile-link svg:hover {
   fill: rgba(21, 25, 58, 0.671);
 }
 
@@ -452,7 +453,7 @@ button {
   padding: 0 2em;
 }
 
-#done_projects #projects_card_wrapper {
+#done_projects #projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,7 +466,7 @@ button {
   overflow-x: scroll;
 }
 
-#done_projects #projects_card_wrapper .project-card {
+#done_projects #projects .project-tile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,14 +477,14 @@ button {
   width: 650px;
 }
 
-#done_projects #projects_card_wrapper .project-card > img {
+#done_projects #projects .project-tile > img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: inherit;
      object-position: inherit;
 }
 
-#done_projects #projects_card_wrapper .project-card .card_description {
+#done_projects #projects .project-tile .card_description {
   background: white;
   text-align: center;
   height: auto;
@@ -491,7 +492,7 @@ button {
   border-radius: 0 0 20px 20px;
 }
 
-#done_projects #projects_card_wrapper .project-card .card_description button {
+#done_projects #projects .project-tile .card_description button {
   background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
   background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
   padding: .8em;
@@ -505,7 +506,7 @@ button {
   transition: 1s 1s;
 }
 
-#done_projects #projects_card_wrapper .project-card .card_description button:hover {
+#done_projects #projects .project-tile .card_description button:hover {
   width: 6em;
   -webkit-transition: 1s 1s;
   transition: 1s 1s;
