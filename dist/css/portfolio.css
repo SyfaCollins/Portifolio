@@ -104,25 +104,16 @@ span {
   padding: 1em;
   margin-top: 2em;
   font-size: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 8em;
   font-family: Montserrat;
   border-collapse: collapse;
   color: #efe8e8;
-  border: none;
-  display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-transition-property: width;
   transition-property: width;
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
-  text-align: center;
 }
 
 #main_text_container #title button:hover {
@@ -163,6 +154,13 @@ span {
   color: white;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 8em;
+}
+
+#main_text_container #pop_up #close_button:hover {
+  width: 7em;
 }
 
 #main_text_container #pop_up h2 {
@@ -334,7 +332,22 @@ button {
 #mentorshipPage #go_back {
   position: relative;
   left: 0;
-  background-color: red;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(110, 18, 18, 0.76)), to(rgba(19, 21, 148, 0.568)));
+  background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
+  color: #efe8e8;
+  cursor: pointer;
+  padding: 1em;
+  margin-top: 1em;
+  width: 8em;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  text-align: center;
+}
+
+#mentorshipPage #go_back:hover {
+  width: 7em;
 }
 
 #scroll_section {
@@ -455,13 +468,12 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-column-gap: 1em;
-          column-gap: 1em;
-  overflow-x: scroll;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  overflow-y: scroll;
 }
 
 #done_projects #projects_card_wrapper .project-card {
@@ -472,7 +484,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 650px;
+  width: 100%;
 }
 
 #done_projects #projects_card_wrapper .project-card > img {
@@ -500,14 +512,13 @@ button {
   border-collapse: collapse;
   color: #efe8e8;
   border: none;
-  -webkit-transition: 1s 1s;
-  transition: 1s 1s;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  width: 8em;
 }
 
 #done_projects #projects_card_wrapper .project-card .card_description button:hover {
-  width: 6em;
-  -webkit-transition: 1s 1s;
-  transition: 1s 1s;
+  width: 7em;
 }
 
 #skill_container {
@@ -698,13 +709,19 @@ button {
 #form_Section .form-container form input, #form_Section .form-container form textarea {
   border-collapse: collapse;
   fill: transparent;
+  padding: 1em;
   height: 2em;
   width: 90%;
   margin-top: 1em;
   border-width: 0 0 2px 0;
-  color: white;
+  color: #1c9394;
   font-size: 18px;
   font-weight: 400;
+}
+
+#form_Section .form-container form input:focus, #form_Section .form-container form textarea:focus {
+  outline: none;
+  background-color: #efe8e8;
 }
 
 #form_Section .form-container form textarea {
@@ -725,10 +742,11 @@ button {
   border: none;
   -webkit-transition: .5s;
   transition: .5s;
+  width: 8em;
 }
 
 #form_Section .form-container form button:hover {
-  width: 6em;
+  width: 7em;
 }
 
 #form_Section .form-container form label {
@@ -799,12 +817,22 @@ button {
 #news_letters form input {
   height: 3em;
   width: 60%;
+  color: #1c9394;
+  padding: 1em;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#news_letters form input:focus {
+  background-color: #efe8e8;
+  outline: none;
 }
 
 #news_letters form button {
   color: white;
   font-family: Montserrat;
-  height: 3em;
+  height: 3.5em;
   width: 30%;
   cursor: pointer;
   -webkit-transition-duration: .5s;
