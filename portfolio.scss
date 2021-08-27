@@ -114,18 +114,13 @@ span{
                 padding:1em;
                 margin-top: 2em;
                 font-size: 18px;
-                display: flex;
                 width: 8em;
                 font-family: Montserrat;
                 border-collapse: collapse;
                 color: $primary-color;
-                border: none;
-                display: flex;
                 align-self: flex-end;
-                justify-content: center;
                 transition-property: width;
                 transition-duration: .5s;
-                text-align: center;
                 
             }
 
@@ -154,7 +149,7 @@ span{
             bottom: 0;
             right: 0;
             left: 0;
-            // transform: translate(50% 50%);
+     
 
             box-shadow: 3px 4px 10px $text-color;
             z-index: 4;
@@ -166,6 +161,12 @@ span{
                 padding: 1em;
                 color: white;
                 align-self: flex-end;
+                transition: .5s;
+                width: 8em;
+
+                &:hover{
+                    width: 7em;
+                }
             }
 
             h2{
@@ -389,9 +390,22 @@ button{
     #go_back{
         position: relative;
         left: 0;
-        background-color: red;
+        background: linear-gradient(to right, rgba(110, 18, 18, 0.76), rgba(19, 21, 148, 0.568));
+        color: $primary-color;
         cursor: pointer;
+        padding:1em;
+        margin-top: 1em;
+        width: 8em;
+        transition-property: width;
+        transition-duration: .5s;
+        text-align: center;
+
+      &:hover{
+          width: 7em;
+      }
     }
+
+   
 }
 
 
@@ -518,15 +532,15 @@ flex-basis: 10%;
 
     #projects_card_wrapper{
         display: flex;
-        flex-direction: row;
-        column-gap: 1em;
-        overflow-x: scroll;
+        flex-direction: column;
+        gap: 1em;
+        overflow-y: scroll;
 
 
         .project-card{
             display:flex;
             flex-direction: column;
-            width: 650px;
+            width: 100%;
 
         
 
@@ -534,7 +548,6 @@ flex-basis: 10%;
                 object-fit: cover;
                 object-position: inherit;
                 
-            
             }
 
             // .project-card:nth-child(1){
@@ -564,11 +577,11 @@ flex-basis: 10%;
                 border-collapse: collapse;
                 color: $primary-color;
                 border: none;
-                transition: 1s 1s;
+                transition-duration: .5s;
+                width: 8em;
 
                 &:hover{
-                    width: 6em;
-                    transition: 1s 1s;
+                    width: 7em;
 
                 }
 
@@ -767,14 +780,21 @@ flex-basis: 10%;
             input , textarea{
                 border-collapse: collapse;
                 fill:transparent;
+                padding: 1em;
                 height: 2em;
                 width: 90%;
                 margin-top: 1em;
                 border-width:0 0 2px 0;
-                color: white;
+                color:$tanciary-color;
                 font-size: 18px;
                 font-weight: map-get($font-weight, medium );
+
         
+                &:focus{
+                    outline: none;
+                    background-color: $primary-color;
+
+                }
             }
 
             textarea{
@@ -793,9 +813,10 @@ flex-basis: 10%;
                 color: $primary-color;
                 border: none;
                 transition: .5s;
+                width: 8em;
 
                &:hover{
-                width: 6em;
+                width: 7em;
                }
             }
 
@@ -889,8 +910,18 @@ flex-basis: 10%;
     // color: white;
       
         input{
-       height: 3em;
-       width: 60%;
+        height: 3em;
+        width: 60%;
+        color: $tanciary-color;
+        padding: 1em;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: map-get($font-weight, medium );
+        
+        &:focus{
+            background-color: $primary-color;
+            outline: none;
+        }
         }
 
 
@@ -898,7 +929,7 @@ flex-basis: 10%;
          
             color: white;
             font-family: Montserrat;
-            height: 3em;
+            height: 3.5em;
             width: 30%;
             cursor: pointer;
             transition-duration: .5s;
